@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Graystonite</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "primary": "#161717",
+                    "tertiary-container": "#003130",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-secondary-fixed": "#311400",
+                    "inverse-on-surface": "#f4f0ef",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#ff8927",
+                    "on-tertiary-container": "#0fa3a0",
+                    "surface-container": "#f1edec",
+                    "surface": "#fdf8f8",
+                    "secondary-fixed-dim": "#ffb786",
+                    "surface-container-high": "#ebe7e7",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1c1b1b",
+                    "tertiary-fixed": "#7ff5f1",
+                    "tertiary-fixed-dim": "#60d9d5",
+                    "on-secondary": "#ffffff",
+                    "background": "#fdf8f8",
+                    "surface-bright": "#fdf8f8",
+                    "outline-variant": "#c4c7c7",
+                    "secondary": "#964900",
+                    "on-primary-fixed": "#1b1c1c",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#2b2b2b",
+                    "on-surface-variant": "#444748",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-low": "#f7f3f2",
+                    "tertiary": "#001a1a",
+                    "inverse-primary": "#c8c6c5",
+                    "on-secondary-container": "#642f00",
+                    "inverse-surface": "#313030",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e5e2e1",
+                    "outline": "#747878",
+                    "primary-fixed": "#e4e2e1",
+                    "secondary-fixed": "#ffdcc6",
+                    "on-tertiary-fixed-variant": "#00504e",
+                    "surface-dim": "#ddd9d8",
+                    "on-secondary-fixed-variant": "#723600",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary-container": "#939292",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary-fixed": "#00201f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding": "120px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px",
+                    "gutter": "32px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Hanken Grotesk"],
+                    "body-md": ["Work Sans"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Work Sans"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-xl": ["60px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .creative-spark {
+            position: relative;
+            display: inline-block;
+        }
+        .creative-spark::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: theme('colors.secondary-container');
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim shadow-sm">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+<a class="flex items-center" href="index.html">
+<img alt="Graystonite Logo" class="h-10 w-auto" src="assets/img/graystonite-logo.png"/>
+</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="index.html">Home</a>
+<a class="text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="about.html">About</a>
+<a class="text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="services.html">Services</a>
+<a class="text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="portfolio.html">Portfolio</a>
+<a class="text-primary font-bold border-b-2 border-secondary-container pb-1 font-body-md text-body-md" href="contact.html">Contact</a>
+</div>
+<div class="w-[132px]" aria-hidden="true"></div>
+</nav>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="py-section-padding px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Content Left -->
+<div class="lg:col-span-5 flex flex-col space-y-unit*8">
+<span class="text-on-tertiary-container bg-tertiary-fixed-dim/20 px-3 py-1 rounded-full text-label-bold font-label-bold w-fit mb-4">CONTACT US</span>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-6">Let's Make It Real</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        Johannesburg-based, by appointment. We believe in high-touch communication and purposeful execution. 
+                    </p>
+<div class="mt-12 space-y-8">
+<div class="flex items-start space-x-4">
+<div class="bg-surface-container p-4 rounded-xl">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary opacity-60 uppercase tracking-widest">Lead Strategist</p>
+<p class="font-headline-md text-body-lg font-bold">John</p>
+<a class="font-body-md text-on-surface-variant hover:text-secondary-container transition-colors" href="tel:+27605483152">+27 (60) 548 3152</a>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="bg-surface-container p-4 rounded-xl">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">person_4</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary opacity-60 uppercase tracking-widest">Operations Director</p>
+<p class="font-headline-md text-body-lg font-bold">Barbara</p>
+<a class="font-body-md text-on-surface-variant hover:text-secondary-container transition-colors" href="tel:+27760680129">+27 (76) 068 0129</a>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="bg-surface-container p-4 rounded-xl">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-primary opacity-60 uppercase tracking-widest">General Enquiries</p>
+<a class="font-body-lg text-body-lg font-bold creative-spark" href="mailto:graystonite@outlook.com">graystonite@outlook.com</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form Right -->
+<div class="lg:col-span-7 mt-12 lg:mt-0">
+<div class="bg-white rounded-xl border border-[#F1F1F1] p-10 shadow-sm transition-transform hover:-translate-y-1 duration-300">
+<form class="space-y-6" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant">FULL NAME</label>
+<input class="w-full px-4 py-4 rounded-xl border border-outline bg-surface focus:border-secondary-container focus:ring-1 focus:ring-secondary-container outline-none transition-all placeholder:text-outline-variant" placeholder="e.g. Alexander Gray" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant">EMAIL ADDRESS</label>
+<input class="w-full px-4 py-4 rounded-xl border border-outline bg-surface focus:border-secondary-container focus:ring-1 focus:ring-secondary-container outline-none transition-all placeholder:text-outline-variant" placeholder="alex@studio.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant">SUBJECT</label>
+<select class="w-full px-4 py-4 rounded-xl border border-outline bg-surface focus:border-secondary-container focus:ring-1 focus:ring-secondary-container outline-none transition-all">
+<option>New Project Inquiry</option>
+<option>Consultation Request</option>
+<option>General Support</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold text-on-surface-variant">MESSAGE</label>
+<textarea class="w-full px-4 py-4 rounded-xl border border-outline bg-surface focus:border-secondary-container focus:ring-1 focus:ring-secondary-container outline-none transition-all placeholder:text-outline-variant" placeholder="Tell us about your concept..." rows="6"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-xl font-headline-md text-body-lg font-bold hover:bg-primary-container transition-colors shadow-lg" type="submit">
+                                Send Message
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Location/Map Placeholder Section -->
+<section class="pb-section-padding px-gutter max-w-container-max mx-auto">
+<div class="w-full h-[500px] rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 shadow-xl relative border border-[#F1F1F1]">
+<div class="w-full h-full bg-surface-container-high flex items-center justify-center relative" data-location="Johannesburg" style="">
+<!-- Symbolic Map Background -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#2b2b2b 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="text-center z-10 p-gutter">
+<div class="inline-flex items-center justify-center w-20 h-20 bg-primary text-on-primary rounded-full mb-6">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Johannesburg HQ</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto">Meetings by appointment only at our private studio. Experience the creative edge of professional design.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-primary dark:bg-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter py-section-padding items-start">
+<div class="flex flex-col space-y-4">
+<span class="font-headline-md text-headline-md font-bold text-on-primary">Graystonite</span>
+<p class="text-on-primary-container font-body-md">From Concept to Completion. Nearly three decades of visual communication excellence.</p>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Navigation</h4>
+<div class="grid grid-cols-1 gap-2">
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="index.html">Home</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="about.html">About</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="services.html">Services</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="portfolio.html">Portfolio</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="contact.html">Contact</a>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Direct Contact</h4>
+<div class="grid grid-cols-1 gap-2">
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="tel:+27605483152">Contact John</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="tel:+27760680129">Contact Barbara</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="mailto:graystonite@outlook.com">graystonite@outlook.com</a>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Legal</h4>
+<div class="grid grid-cols-1 gap-2">
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="terms-of-service.html">Terms of Service</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-white/10 text-center">
+<p class="text-on-primary-container opacity-60 text-sm font-body-md">© 2024 Graystonite. From Concept to Completion.</p>
+</div>
+</footer>
+<script>
+        // Simple Interaction Logic
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.classList.add('opacity-50');
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerText = 'Message Sent Successfully';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+                btn.disabled = false;
+                e.target.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-tertiary-container', 'text-on-tertiary-container', 'opacity-50');
+                    btn.classList.add('bg-primary');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Floating effect for cards
+        const cards = document.querySelectorAll('.bg-white.rounded-xl');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body></html>

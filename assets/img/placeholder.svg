@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Image placeholder">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#170f0a" stroke-width="1" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#f4ece8"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  <!-- corner ticks -->
+  <path d="M40 24H24V40" fill="none" stroke="#170f0a" stroke-width="2"/>
+  <path d="M760 576H776V560" fill="none" stroke="#170f0a" stroke-width="2"/>
+  <!-- center mark -->
+  <g transform="translate(400 268)">
+    <rect x="-46" y="-46" width="92" height="92" fill="none" stroke="#170f0a" stroke-width="2" opacity="0.55"/>
+    <path d="M-46 -46 L46 46 M46 -46 L-46 46" stroke="#170f0a" stroke-width="1" opacity="0.25"/>
+    <rect x="-8" y="-8" width="16" height="16" fill="#f9532f"/>
+  </g>
+  <text x="400" y="362" text-anchor="middle" font-family="'Archivo Narrow', Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="6" fill="#170f0a">GRAYSTONITE</text>
+  <text x="400" y="392" text-anchor="middle" font-family="'Hanken Grotesk', Arial, sans-serif" font-size="14" letter-spacing="1" fill="#4e4540">VISUAL COMMUNICATION</text>
+</svg>

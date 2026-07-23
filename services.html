@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Services | Graystonite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "primary": "#161717",
+                        "tertiary-container": "#003130",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-secondary-fixed": "#311400",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#ff8927",
+                        "on-tertiary-container": "#0fa3a0",
+                        "surface-container": "#f1edec",
+                        "surface": "#fdf8f8",
+                        "secondary-fixed-dim": "#ffb786",
+                        "surface-container-high": "#ebe7e7",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "tertiary-fixed": "#7ff5f1",
+                        "tertiary-fixed-dim": "#60d9d5",
+                        "on-secondary": "#ffffff",
+                        "background": "#fdf8f8",
+                        "surface-bright": "#fdf8f8",
+                        "outline-variant": "#c4c7c7",
+                        "secondary": "#964900",
+                        "on-primary-fixed": "#1b1c1c",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#2b2b2b",
+                        "on-surface-variant": "#444748",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1c1b1b",
+                        "surface-container-low": "#f7f3f2",
+                        "tertiary": "#001a1a",
+                        "inverse-primary": "#c8c6c5",
+                        "on-secondary-container": "#642f00",
+                        "inverse-surface": "#313030",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "outline": "#747878",
+                        "primary-fixed": "#e4e2e1",
+                        "secondary-fixed": "#ffdcc6",
+                        "on-tertiary-fixed-variant": "#00504e",
+                        "surface-dim": "#ddd9d8",
+                        "on-secondary-fixed-variant": "#723600",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-container": "#939292",
+                        "surface-tint": "#5f5e5e",
+                        "on-tertiary-fixed": "#00201f",
+                        "accent-magenta": "#E6007E"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "120px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Work Sans"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Work Sans"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["60px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-accent-magenta { background-color: #E6007E; }
+        .text-accent-magenta { color: #E6007E; }
+
+        /* ---- Scroll reveal ---- */
+        .js [data-reveal] { opacity: 0; }
+        .js [data-reveal].in-view {
+            animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation-delay: var(--d, 0s);
+        }
+        .js [data-reveal].reveal-done { animation: none; opacity: 1; }
+        @keyframes revealUp {
+            from { opacity: 0; transform: translateY(26px); }
+            to   { opacity: 1; transform: none; }
+        }
+
+        /* ---- Underline-grow on nav links ---- */
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -2px;
+            height: 2px; width: 0;
+            background-color: #ff8927;
+            transition: width 0.25s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .js [data-reveal] { opacity: 1 !important; animation: none !important; }
+            html { scroll-behavior: auto; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim shadow-sm transition-shadow duration-300">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+<a class="flex items-center transition-transform duration-200 hover:scale-105" href="index.html">
+<img alt="Graystonite Logo" class="h-10 w-auto" src="assets/img/graystonite-logo.png"/>
+</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="index.html">Home</a>
+<a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="about.html">About</a>
+<a class="text-primary font-bold border-b-2 border-secondary-container pb-1 font-body-md text-body-md" href="services.html">Services</a>
+<a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="portfolio.html">Portfolio</a>
+<a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="contact.html">Contact</a>
+</div>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-bold text-label-bold transition-transform duration-150 hover:scale-105" href="contact.html">Get in Touch</a>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-12 px-gutter max-w-container-max mx-auto text-center">
+<div class="inline-block px-4 py-1 rounded-full bg-tertiary-fixed-dim/10 text-on-tertiary-container font-label-bold text-label-bold mb-6" data-reveal>
+                EXPERTISE &amp; EXECUTION
+            </div>
+<h1 class="font-headline-xl text-headline-xl mb-6" data-reveal>Our Services</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto" data-reveal>
+                Nearly three decades of visual communication expertise. From tactical execution to grand-scale creative vision, we deliver clarity and impact for enterprise partners — every discipline handled in-house, from first concept to final delivery.
+            </p>
+<!-- Quick jump links -->
+<div class="flex flex-wrap justify-center gap-3 mt-10" data-reveal>
+<a class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant text-sm font-label-bold hover:border-primary hover:text-primary transition-colors" href="#branding">Branding &amp; Design</a>
+<a class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant text-sm font-label-bold hover:border-primary hover:text-primary transition-colors" href="#print">Print</a>
+<a class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant text-sm font-label-bold hover:border-primary hover:text-primary transition-colors" href="#packaging">Packaging &amp; Labels</a>
+<a class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant text-sm font-label-bold hover:border-primary hover:text-primary transition-colors" href="#books">Books &amp; eBooks</a>
+<a class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant text-sm font-label-bold hover:border-primary hover:text-primary transition-colors" href="#digital">Digital Documents</a>
+<a class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant text-sm font-label-bold hover:border-primary hover:text-primary transition-colors" href="#signage">Signage</a>
+<a class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant text-sm font-label-bold hover:border-primary hover:text-primary transition-colors" href="#apparel">Branded Clothing</a>
+</div>
+</section>
+<!-- ============ 1. BRANDING & DESIGN ============ -->
+<section class="scroll-mt-24 bg-surface py-24 px-gutter" id="branding">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div data-reveal>
+<span class="inline-block font-label-bold text-label-bold text-secondary-container mb-4">BRAND IDENTITY</span>
+<div class="w-14 h-14 rounded-full bg-secondary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary-container text-3xl">brush</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-md text-primary mb-5">Branding &amp; Design</h2>
+<p class="font-body-lg text-body-md text-on-surface-variant mb-8 max-w-xl">
+                        Strategic identity systems that command attention and hold up over time. We pair nearly three decades of corporate insight with contemporary craft to build brands that are coherent everywhere they appear — on a screen, on a shelf, and on a building.
+                    </p>
+<ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Logo &amp; mark design</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Visual identity systems</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Brand guidelines &amp; toolkits</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Typography &amp; colour systems</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Rebrands &amp; refreshes</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Campaign &amp; collateral design</span></li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary border-b-2 border-secondary-container pb-1 group" href="contact.html">Start a branding project <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+<div class="relative aspect-[4/3] rounded-xl border border-[#F1F1F1] overflow-hidden bg-gradient-to-br from-secondary-container/15 to-secondary-container/5 flex items-center justify-center group" data-reveal style="--d:0.15s">
+<span class="material-symbols-outlined text-secondary-container/40 transition-transform duration-500 group-hover:scale-110" style="font-size:120px">token</span>
+</div>
+</div>
+</section>
+<!-- ============ 2. PRINT ============ -->
+<section class="scroll-mt-24 bg-surface-container-low py-24 px-gutter" id="print">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative aspect-[4/3] rounded-xl border border-[#F1F1F1] overflow-hidden bg-gradient-to-br from-on-tertiary-container/15 to-on-tertiary-container/5 flex items-center justify-center group lg:order-1" data-reveal style="--d:0.15s">
+<span class="material-symbols-outlined text-on-tertiary-container/40 transition-transform duration-500 group-hover:scale-110" style="font-size:120px">print</span>
+<span class="absolute bottom-5 left-5 px-4 py-2 rounded-full bg-white/90 backdrop-blur text-[12px] font-label-bold tracking-widest uppercase text-on-tertiary-container">50 – 50,000 copies</span>
+</div>
+<div class="lg:order-2" data-reveal>
+<span class="inline-block font-label-bold text-label-bold text-on-tertiary-container mb-4">PRODUCTION</span>
+<div class="w-14 h-14 rounded-full bg-on-tertiary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl">print</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-md text-primary mb-5">Print</h2>
+<p class="font-body-lg text-body-md text-on-surface-variant mb-8 max-w-xl">
+                        Precision lithographic and digital printing for everything from high-volume corporate collateral to bespoke, limited runs. Because we build files for the press — not just the screen — colour and finish land exactly as intended, from the first copy to the fifty-thousandth.
+                    </p>
+<ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Offset (litho) printing</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Digital short-run</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Brochures &amp; catalogues</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Business stationery</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Foil, emboss, spot-UV &amp; die-cut</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Paper &amp; stock consultation</span></li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary border-b-2 border-on-tertiary-container pb-1 group" href="contact.html">Request a print quote <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- ============ 3. PACKAGING & LABELS ============ -->
+<section class="scroll-mt-24 bg-surface py-24 px-gutter" id="packaging">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div data-reveal>
+<span class="inline-block font-label-bold text-label-bold text-accent-magenta mb-4">STRUCTURAL</span>
+<div class="w-14 h-14 rounded-full bg-accent-magenta/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-accent-magenta text-3xl">package_2</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-md text-primary mb-5">Packaging &amp; Labels</h2>
+<p class="font-body-lg text-body-md text-on-surface-variant mb-8 max-w-xl">
+                        Tactile, high-impact packaging designed to win the shelf and reward the hand. We engineer the structure as carefully as the artwork — dielines, materials, and finishes tested to survive fulfilment and still look considered when the customer opens the box.
+                    </p>
+<ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Structural &amp; dieline design</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Folding cartons &amp; boxes</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Product &amp; bottle labels</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Material &amp; substrate selection</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Prototyping &amp; mock-ups</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Shelf-impact &amp; compliance</span></li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary border-b-2 border-accent-magenta pb-1 group" href="contact.html">Discuss a packaging project <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+<div class="relative aspect-[4/3] rounded-xl border border-[#F1F1F1] overflow-hidden bg-gradient-to-br from-accent-magenta/15 to-accent-magenta/5 flex items-center justify-center group" data-reveal style="--d:0.15s">
+<span class="material-symbols-outlined text-accent-magenta/40 transition-transform duration-500 group-hover:scale-110" style="font-size:120px">inventory_2</span>
+</div>
+</div>
+</section>
+<!-- ============ 4. BOOKS & eBOOKS ============ -->
+<section class="scroll-mt-24 bg-surface-container-low py-24 px-gutter" id="books">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative aspect-[4/3] rounded-xl border border-[#F1F1F1] overflow-hidden bg-gradient-to-br from-secondary-container/15 to-secondary-container/5 flex items-center justify-center group lg:order-1" data-reveal style="--d:0.15s">
+<span class="material-symbols-outlined text-secondary-container/40 transition-transform duration-500 group-hover:scale-110" style="font-size:120px">menu_book</span>
+</div>
+<div class="lg:order-2" data-reveal>
+<span class="inline-block font-label-bold text-label-bold text-secondary-container mb-4">EDITORIAL</span>
+<div class="w-14 h-14 rounded-full bg-secondary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary-container text-3xl">menu_book</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-md text-primary mb-5">Books &amp; eBooks</h2>
+<p class="font-body-lg text-body-md text-on-surface-variant mb-8 max-w-xl">
+                        Editorial design and production for prestige print volumes and accessible digital editions alike. We handle the long-form craft — grids, pagination, and typesetting — and deliver files that are equally at home on a press or a screen reader.
+                    </p>
+<ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Editorial layout &amp; grids</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Cover design</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Typesetting &amp; pagination</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Image prep &amp; retouching</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Reflowable EPUB eBooks</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Print-ready file delivery</span></li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary border-b-2 border-secondary-container pb-1 group" href="contact.html">Plan a publication <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- ============ 5. DIGITAL DOCUMENTS ============ -->
+<section class="scroll-mt-24 bg-surface py-24 px-gutter" id="digital">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div data-reveal>
+<span class="inline-block font-label-bold text-label-bold text-on-tertiary-container mb-4">INTERACTIVE</span>
+<div class="w-14 h-14 rounded-full bg-on-tertiary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl">description</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-md text-primary mb-5">Digital Documents</h2>
+<p class="font-body-lg text-body-md text-on-surface-variant mb-8 max-w-xl">
+                        Interactive PDFs, accessible corporate reports, and presentation decks built for a digital-first world. Navigable, tagged, and on-brand — documents that read as clearly for a screen reader as they do in a boardroom.
+                    </p>
+<ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Interactive PDFs</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Accessible (tagged) reports</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Presentation &amp; pitch decks</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Fillable forms</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Templated document systems</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-on-tertiary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Data-driven reporting layouts</span></li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary border-b-2 border-on-tertiary-container pb-1 group" href="contact.html">Build a document system <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+<div class="relative aspect-[4/3] rounded-xl border border-[#F1F1F1] overflow-hidden bg-gradient-to-br from-on-tertiary-container/15 to-on-tertiary-container/5 flex items-center justify-center group" data-reveal style="--d:0.15s">
+<span class="material-symbols-outlined text-on-tertiary-container/40 transition-transform duration-500 group-hover:scale-110" style="font-size:120px">description</span>
+</div>
+</div>
+</section>
+<!-- ============ 6. SIGNAGE & LARGE FORMAT ============ -->
+<section class="scroll-mt-24 bg-surface-container-low py-24 px-gutter" id="signage">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative aspect-[4/3] rounded-xl border border-[#F1F1F1] overflow-hidden bg-gradient-to-br from-accent-magenta/15 to-accent-magenta/5 flex items-center justify-center group lg:order-1" data-reveal style="--d:0.15s">
+<span class="material-symbols-outlined text-accent-magenta/40 transition-transform duration-500 group-hover:scale-110" style="font-size:120px">signpost</span>
+</div>
+<div class="lg:order-2" data-reveal>
+<span class="inline-block font-label-bold text-label-bold text-accent-magenta mb-4">ENVIRONMENTAL</span>
+<div class="w-14 h-14 rounded-full bg-accent-magenta/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-accent-magenta text-3xl">grid_view</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-md text-primary mb-5">Signage &amp; Large Format</h2>
+<p class="font-body-lg text-body-md text-on-surface-variant mb-8 max-w-xl">
+                        Command physical space with high-resolution environmental graphics, architectural signage, and event displays. We design for the material and the site — then coordinate production and installation so the finished piece fits the wall, not just the mock-up.
+                    </p>
+<ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Environmental graphics</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Wayfinding systems</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Exhibition &amp; event displays</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Window &amp; vehicle graphics</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Banners &amp; backdrops</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent-magenta text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Installation coordination</span></li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary border-b-2 border-accent-magenta pb-1 group" href="contact.html">Scope a signage project <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- ============ 7. BRANDED CLOTHING & WORKWEAR ============ -->
+<section class="scroll-mt-24 bg-surface py-24 px-gutter" id="apparel">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-16 items-center">
+<div data-reveal>
+<span class="inline-block font-label-bold text-label-bold text-secondary-container mb-4">APPAREL</span>
+<div class="w-14 h-14 rounded-full bg-secondary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary-container text-3xl">checkroom</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-md text-primary mb-5">Branded Clothing &amp; Workwear</h2>
+<p class="font-body-lg text-body-md text-on-surface-variant mb-8 max-w-xl">
+                        Premium apparel that extends your brand into the physical world through quality fabrication. From boardroom-ready polos to hard-wearing site uniforms, we handle design, decoration, and bulk fulfilment so a whole team turns up on-brand.
+                    </p>
+<ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 mb-8">
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Uniform &amp; workwear design</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Screen printing</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Embroidery</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Promotional apparel</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Fabric &amp; garment sourcing</span></li>
+<li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary-container text-[20px] mt-0.5">check_circle</span><span class="text-on-surface-variant">Bulk fulfilment</span></li>
+</ul>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary border-b-2 border-secondary-container pb-1 group" href="contact.html">Kit out your team <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+<div class="relative aspect-[4/3] rounded-xl border border-[#F1F1F1] overflow-hidden bg-gradient-to-br from-secondary-container/15 to-secondary-container/5 flex items-center justify-center group" data-reveal style="--d:0.15s">
+<span class="material-symbols-outlined text-secondary-container/40 transition-transform duration-500 group-hover:scale-110" style="font-size:120px">checkroom</span>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary text-on-primary py-section-padding px-gutter">
+<div class="max-w-container-max mx-auto text-center" data-stagger>
+<h2 class="font-headline-lg text-headline-lg mb-8" data-reveal>Ready to bring your concept to completion?</h2>
+<p class="font-body-lg text-body-lg mb-12 opacity-80 max-w-2xl mx-auto" data-reveal>
+                    Let's discuss how nearly three decades of design expertise can elevate your brand's communication strategy.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-6" data-reveal>
+<a class="inline-block bg-white text-primary px-10 py-4 rounded-full font-label-bold text-label-bold hover:scale-105 transition-transform" href="contact.html">
+                        Schedule a Consultation
+                    </a>
+<a class="inline-block border-b-2 border-secondary-container text-white px-6 py-4 font-label-bold text-label-bold hover:text-secondary-container transition-colors" href="portfolio.html">
+                        View Recent Work
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-primary dark:bg-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter py-section-padding items-start">
+<div class="flex flex-col space-y-4">
+<span class="font-headline-md text-headline-md font-bold text-on-primary">Graystonite</span>
+<p class="text-on-primary-container font-body-md">From Concept to Completion. Nearly three decades of visual communication excellence.</p>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Navigation</h4>
+<div class="grid grid-cols-1 gap-2">
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="index.html">Home</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="about.html">About</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="services.html">Services</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="portfolio.html">Portfolio</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="contact.html">Contact</a>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Direct Contact</h4>
+<div class="grid grid-cols-1 gap-2">
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="tel:+27605483152">Contact John</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="tel:+27760680129">Contact Barbara</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="mailto:graystonite@outlook.com">graystonite@outlook.com</a>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Legal</h4>
+<div class="grid grid-cols-1 gap-2">
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="terms-of-service.html">Terms of Service</a>
+<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-white/10 text-center">
+<p class="text-on-primary-container opacity-60 text-sm font-body-md">© 2024 Graystonite. From Concept to Completion.</p>
+</div>
+</footer>
+<script>
+        document.documentElement.classList.add('js');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        document.querySelectorAll('[data-stagger]').forEach(group => {
+            group.querySelectorAll(':scope > [data-reveal], :scope [data-reveal]').forEach((el, i) => {
+                if (!el.style.getPropertyValue('--d')) el.style.setProperty('--d', (i * 0.08).toFixed(2) + 's');
+            });
+        });
+
+        if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    const el = entry.target;
+                    el.classList.add('in-view');
+                    el.addEventListener('animationend', () => el.classList.add('reveal-done'), { once: true });
+                    io.unobserve(el);
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+            document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+        } else {
+            document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in-view', 'reveal-done'));
+        }
+
+        document.querySelectorAll('button, a').forEach(elem => {
+            elem.addEventListener('mousedown', () => elem.classList.add('scale-95'));
+            elem.addEventListener('mouseup', () => elem.classList.remove('scale-95'));
+            elem.addEventListener('mouseleave', () => elem.classList.remove('scale-95'));
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) header.classList.add('shadow-md', 'backdrop-blur-md');
+            else header.classList.remove('shadow-md', 'backdrop-blur-md');
+        });
+    </script>
+</body></html>
