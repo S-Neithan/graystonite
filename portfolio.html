@@ -126,6 +126,25 @@
             color: #ffffff;
             border-color: #161717;
         }
+
+        /* ---- CTA vertical marquee ---- */
+        #cta-marquee {
+            animation: marqueeScrollUp 22s linear infinite;
+            will-change: transform;
+        }
+        #cta-marquee-wrap:hover #cta-marquee {
+            animation-play-state: paused;
+        }
+        @keyframes marqueeScrollUp {
+            from { transform: translateY(0); }
+            to   { transform: translateY(-50%); }
+        }
+        .marquee-item {
+            border-bottom: 1px solid rgba(22, 23, 23, 0.08);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #cta-marquee { animation: none; }
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
@@ -271,12 +290,10 @@
 <p class="font-body-md text-body-md text-on-surface-variant">A navigable PDF with linked charts, bookmarks, and tagged reading order.</p>
 </div>
 </article>
-<!-- Item: Branding (placeholder) -->
+<!-- Item: Branding (image) -->
 <article class="portfolio-item group" data-category="branding">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30">
-<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-secondary-container/20 to-secondary-container/5 transition-transform duration-700 group-hover:scale-105">
-<span class="material-symbols-outlined text-secondary-container/50" style="font-size:64px">token</span>
-</div>
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" style="background-image: url('https://picsum.photos/seed/graystonite-mark-studies/900/675')"></div>
 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-label-bold tracking-widest uppercase text-secondary">Branding</span>
 </div>
 <div class="pt-5">
@@ -284,12 +301,10 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Logotype and monogram exploration for a boutique law practice.</p>
 </div>
 </article>
-<!-- Item: Packaging (placeholder) -->
+<!-- Item: Packaging (image) -->
 <article class="portfolio-item group" data-category="packaging">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30">
-<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-accent-magenta/20 to-accent-magenta/5 transition-transform duration-700 group-hover:scale-105">
-<span class="material-symbols-outlined text-accent-magenta/50" style="font-size:64px">inventory_2</span>
-</div>
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" style="background-image: url('https://picsum.photos/seed/graystonite-verdant-skincare/900/675')"></div>
 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-label-bold tracking-widest uppercase text-accent-magenta">Packaging</span>
 </div>
 <div class="pt-5">
@@ -297,12 +312,10 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Structural cartons and dielines engineered for a refillable range.</p>
 </div>
 </article>
-<!-- Item: Signage (placeholder) -->
+<!-- Item: Signage (image) -->
 <article class="portfolio-item group" data-category="signage">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30">
-<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-secondary/20 to-secondary/5 transition-transform duration-700 group-hover:scale-105">
-<span class="material-symbols-outlined text-secondary/50" style="font-size:64px">signpost</span>
-</div>
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" style="background-image: url('https://picsum.photos/seed/graystonite-northlight/900/675')"></div>
 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-label-bold tracking-widest uppercase text-secondary">Signage</span>
 </div>
 <div class="pt-5">
@@ -310,12 +323,10 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Environmental graphics and directional signage for a mixed-use campus.</p>
 </div>
 </article>
-<!-- Item: Apparel (placeholder) -->
+<!-- Item: Apparel (image) -->
 <article class="portfolio-item group" data-category="apparel">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30">
-<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-on-tertiary-container/20 to-on-tertiary-container/5 transition-transform duration-700 group-hover:scale-105">
-<span class="material-symbols-outlined text-on-tertiary-container/50" style="font-size:64px">checkroom</span>
-</div>
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" style="background-image: url('https://picsum.photos/seed/graystonite-forge-apparel/900/675')"></div>
 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-label-bold tracking-widest uppercase text-on-tertiary-container">Apparel</span>
 </div>
 <div class="pt-5">
@@ -323,12 +334,10 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Screen-printed uniform line and embroidered marks for an events crew.</p>
 </div>
 </article>
-<!-- Item: Print (placeholder) -->
+<!-- Item: Print (image) -->
 <article class="portfolio-item group" data-category="print">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30">
-<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-on-tertiary-container/20 to-on-tertiary-container/5 transition-transform duration-700 group-hover:scale-105">
-<span class="material-symbols-outlined text-on-tertiary-container/50" style="font-size:64px">print</span>
-</div>
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" style="background-image: url('https://picsum.photos/seed/graystonite-letterpress/900/675')"></div>
 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-label-bold tracking-widest uppercase text-on-tertiary-container">Print</span>
 </div>
 <div class="pt-5">
@@ -336,12 +345,10 @@
 <p class="font-body-md text-body-md text-on-surface-variant">A cotton-stock suite with blind deboss and edge painting.</p>
 </div>
 </article>
-<!-- Item: Signage (placeholder) -->
+<!-- Item: Signage (image) -->
 <article class="portfolio-item group" data-category="signage">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30">
-<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-secondary/20 to-secondary/5 transition-transform duration-700 group-hover:scale-105">
-<span class="material-symbols-outlined text-secondary/50" style="font-size:64px">storefront</span>
-</div>
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" style="background-image: url('https://picsum.photos/seed/graystonite-meridian-expo/900/675')"></div>
 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-label-bold tracking-widest uppercase text-secondary">Signage</span>
 </div>
 <div class="pt-5">
@@ -349,12 +356,10 @@
 <p class="font-body-md text-body-md text-on-surface-variant">Large-format stand graphics and modular panels for a trade show.</p>
 </div>
 </article>
-<!-- Item: Publications (placeholder) -->
+<!-- Item: Publications (image) -->
 <article class="portfolio-item group" data-category="publications">
-<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30">
-<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/10 to-primary/5 transition-transform duration-700 group-hover:scale-105">
-<span class="material-symbols-outlined text-primary/40" style="font-size:64px">auto_stories</span>
-</div>
+<div class="relative aspect-[4/3] rounded-xl overflow-hidden border border-outline-variant/30 bg-surface-container-high">
+<div class="w-full h-full bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" style="background-image: url('https://picsum.photos/seed/graystonite-field-guide/900/675')"></div>
 <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-[11px] font-label-bold tracking-widest uppercase text-primary">Publications</span>
 </div>
 <div class="pt-5">
@@ -368,20 +373,56 @@
 </div>
 </section>
 <!-- CTA Section -->
-<section class="bg-primary text-on-primary py-section-padding px-gutter">
-<div class="max-w-container-max mx-auto text-center">
-<h2 class="font-headline-lg text-headline-lg mb-8">Ready to bring your concept to completion?</h2>
-<p class="font-body-lg text-body-lg mb-12 opacity-80 max-w-2xl mx-auto">
-                    Let's discuss how nearly three decades of design expertise can elevate your brand's communication strategy.
-                </p>
-<div class="flex flex-col md:flex-row justify-center gap-6">
-<a class="inline-block bg-white text-primary px-10 py-4 rounded-full font-label-bold text-label-bold hover:scale-105 transition-transform" href="contact.html">
-                        Schedule a Consultation
-                    </a>
-<a class="inline-block border-b-2 border-secondary-container text-white px-6 py-4 font-label-bold text-label-bold hover:text-secondary-container transition-colors" href="services.html">
-                        Explore Services
-                    </a>
-</div>
+<section class="bg-surface-container-low py-section-padding px-gutter overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+  <!-- Left content -->
+  <div class="space-y-8 max-w-xl">
+    <span class="inline-block self-start px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold">LET'S TALK</span>
+    <h2 class="font-headline-xl text-headline-xl text-primary leading-tight">
+      Ready to bring your <span class="text-secondary-container">concept</span> to completion?
+    </h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+      Let's discuss how nearly three decades of design expertise can elevate your brand's communication strategy.
+    </p>
+    <div class="flex flex-wrap gap-4">
+      <a href="contact.html" class="group relative inline-block px-8 py-4 bg-primary text-on-primary rounded-xl font-label-bold text-label-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <span class="relative z-10">Schedule a Consultation</span>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+      </a>
+      <a href="services.html" class="group relative inline-block px-8 py-4 bg-surface text-primary rounded-xl font-label-bold text-label-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg border border-outline-variant/40">
+        <span class="relative z-10">Explore Services</span>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Right: vertical marquee -->
+  <div id="cta-marquee-wrap" class="relative h-[420px] md:h-[500px] flex items-center justify-center">
+    <div class="relative w-full h-full overflow-hidden">
+      <div id="cta-marquee" class="group flex flex-col h-full">
+        <div class="cta-marquee-track flex shrink-0 flex-col">
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Enterprise Brands</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Creative Directors</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Packaging Teams</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Print Studios</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Marketing Leads</div>
+        </div>
+        <div class="cta-marquee-track flex shrink-0 flex-col" aria-hidden="true">
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Enterprise Brands</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Creative Directors</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Packaging Teams</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Print Studios</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Marketing Leads</div>
+        </div>
+      </div>
+      <!-- Top vignette -->
+      <div class="pointer-events-none absolute top-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-b from-surface-container-low via-surface-container-low/60 to-transparent z-10"></div>
+      <!-- Bottom vignette -->
+      <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-t from-surface-container-low via-surface-container-low/60 to-transparent z-10"></div>
+    </div>
+  </div>
+
 </div>
 </section>
 </main>

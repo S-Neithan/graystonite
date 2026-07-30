@@ -166,6 +166,18 @@
             .floaty, .floaty-slow { animation: none !important; }
             html { scroll-behavior: auto; }
         }
+
+        /* ---- Vertical marquee (CTA section) ---- */
+        .cta-marquee-track {
+            animation: marqueeVertical 10s linear infinite;
+        }
+        @keyframes marqueeVertical {
+            from { transform: translateY(0); }
+            to   { transform: translateY(-100%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .cta-marquee-track { animation: none !important; }
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
@@ -187,78 +199,132 @@
 </header>
 <main>
 <!-- Hero Section -->
-<section class="relative pt-section-padding px-gutter max-w-container-max mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-span-7" data-stagger>
-<span class="inline-block px-3 py-1 bg-brand-magenta/10 text-brand-magenta rounded-full font-label-bold text-label-bold mb-6" data-reveal>ESTABLISHED 1997</span>
-<h1 class="font-headline-xl text-headline-xl text-primary mb-8" data-reveal>
-                        27 Years Turning <span class="accent-underline">Ideas</span> Into Things
-                    </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl" data-reveal>
-                        Graystonite began as a boutique design studio with a singular obsession: visual clarity. Nearly three decades later, we have evolved into a comprehensive execution powerhouse where strategy, design, and physical production live under one roof.
-                    </p>
-</div>
-<div class="lg:col-span-5 relative mt-12 lg:mt-0" data-reveal style="--d:0.2s">
-<div class="rounded-xl overflow-hidden editorial-shadow border border-[#F1F1F1] aspect-[4/5] group">
-<img class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" data-alt="A sophisticated close-up of high-end print production showing texture and metallic foil stamping on a minimalist business card. The lighting is bright and architectural, highlighting the premium paper stock. The color palette features deep charcoal grays and a subtle pop of magenta, embodying a corporate yet creative studio aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlrKDIlcwq18ql1jzIGtnSwi6glyaj9mVYhkKdTyUZ6w8WPmVQqPVeieN0QvaZOYd6lI-1H2WiGhdCgkEQ21nMkAZEduAhUyeUx2KVg1ljSJWOYp05-KbiU-JokGIaS3LuAuYzGGVp5513g7WKCDFvE0tTI0ZBbCxC80_KTmK3dzdBdCrByFgqtUgBbhNJ_Tzi6MxjMGPUE6HmLh4Ckl-YwFr8di1RkZA5jyVzMfyX2iNM8ly-_IrDEg"/>
-</div>
-<!-- Decorative Element -->
-<div class="absolute -bottom-8 -left-8 w-32 h-32 bg-brand-magenta/5 rounded-full blur-3xl -z-10 floaty"></div>
-</div>
+<section class="relative pt-section-padding px-gutter max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+  <!-- Left: Text content -->
+  <div class="flex flex-col items-center text-center lg:items-start lg:text-left" data-stagger>
+    <span class="inline-block self-center lg:self-start px-3 py-1 bg-brand-magenta/10 text-brand-magenta rounded-full font-label-bold text-label-bold mb-6" data-reveal>ESTABLISHED 1997</span>
+    <h1 class="font-headline-xl text-headline-xl text-primary mb-6" data-reveal>
+      27 Years Turning <span class="accent-underline">Ideas</span> Into Things
+    </h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10" data-reveal>
+      Graystonite began as a boutique design studio with a singular obsession: visual clarity. Nearly three decades later, we have evolved into a comprehensive execution powerhouse where strategy, design, and physical production live under one roof.
+    </p>
+    <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-12" data-reveal>
+      <a href="contact.html" class="inline-block bg-primary text-on-primary px-8 py-4 rounded-full font-label-bold text-label-bold hover:scale-105 transition-transform">Start Your Project</a>
+      <a href="portfolio.html" class="inline-block border border-primary/15 text-primary px-8 py-4 rounded-full font-label-bold text-label-bold hover:border-brand-magenta hover:text-brand-magenta transition-colors">View Our Work</a>
+    </div>
+    <div class="flex flex-nowrap items-start justify-center lg:justify-start gap-3 sm:gap-6 lg:gap-8 overflow-x-auto" data-reveal>
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <div class="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-brand-magenta/10 shrink-0">
+          <span class="material-symbols-outlined text-brand-magenta text-lg sm:text-xl">calendar_month</span>
+        </div>
+        <div class="text-left">
+          <p class="font-headline-md text-[16px] sm:text-[20px] text-primary leading-none" data-count="27">27</p>
+          <p class="text-on-surface-variant text-xs sm:text-sm mt-1 whitespace-nowrap">Years of Service</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <div class="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-brand-magenta/10 shrink-0">
+          <span class="material-symbols-outlined text-brand-magenta text-lg sm:text-xl">workspaces</span>
+        </div>
+        <div class="text-left">
+          <p class="font-headline-md text-[16px] sm:text-[20px] text-primary leading-none" data-count="4" data-suffix="k+">4k+</p>
+          <p class="text-on-surface-variant text-xs sm:text-sm mt-1 whitespace-nowrap">Completed Projects</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <div class="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-full bg-brand-magenta/10 shrink-0">
+          <span class="material-symbols-outlined text-brand-magenta text-lg sm:text-xl">verified</span>
+        </div>
+        <div class="text-left">
+          <p class="font-headline-md text-[16px] sm:text-[20px] text-primary leading-none" data-count="100" data-suffix="%">100%</p>
+          <p class="text-on-surface-variant text-xs sm:text-sm mt-1 whitespace-nowrap">In-House Production</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Floating image collage -->
+  <div class="relative h-[400px] sm:h-[500px] w-full mt-12 lg:mt-0" data-reveal style="--d:0.2s">
+
+    <!-- Decorative floating shapes -->
+    <div class="absolute -top-4 left-1/4 h-16 w-16 rounded-full bg-brand-magenta/10 floaty pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 h-12 w-12 rounded-lg bg-tertiary-fixed-dim/20 floaty-slow pointer-events-none"></div>
+    <div class="absolute bottom-1/4 left-4 h-6 w-6 rounded-full bg-secondary-container/20 floaty pointer-events-none"></div>
+
+    <!-- Image 1: top center -->
+    <div class="absolute left-1/2 top-0 h-48 w-48 sm:h-64 sm:w-64 -translate-x-1/2 rounded-2xl bg-white p-2 editorial-shadow group" data-reveal style="--d:0.1s">
+      <img class="h-full w-full rounded-xl object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" alt="Foil-stamped business card production detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlrKDIlcwq18ql1jzIGtnSwi6glyaj9mVYhkKdTyUZ6w8WPmVQqPVeieN0QvaZOYd6lI-1H2WiGhdCgkEQ21nMkAZEduAhUyeUx2KVg1ljSJWOYp05-KbiU-JokGIaS3LuAuYzGGVp5513g7WKCDFvE0tTI0ZBbCxC80_KTmK3dzdBdCrByFgqtUgBbhNJ_Tzi6MxjMGPUE6HmLh4Ckl-YwFr8di1RkZA5jyVzMfyX2iNM8ly-_IrDEg"/>
+    </div>
+
+    <!-- Image 2: right third -->
+    <div class="absolute right-0 top-1/3 h-40 w-40 sm:h-56 sm:w-56 rounded-2xl bg-white p-2 editorial-shadow group" data-reveal style="--d:0.2s">
+      <img class="h-full w-full rounded-xl object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" alt="Pantone color swatch book used for precision color matching" src="https://images.unsplash.com/photo-1642480532034-362360552ccb?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"/>
+    </div>
+
+    <!-- Image 3: bottom left -->
+    <div class="absolute bottom-0 left-0 h-32 w-32 sm:h-48 sm:w-48 rounded-2xl bg-white p-2 editorial-shadow group" data-reveal style="--d:0.3s">
+      <img class="h-full w-full rounded-xl object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" alt="Custom packaging design detail" src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"/>
+    </div>
+
+  </div>
+
 </div>
 </section>
 <!-- Narrative Section (Bento Inspired) -->
 <section class="py-section-padding px-gutter max-w-container-max mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" data-stagger>
-<!-- Card 1: The Origin -->
-<div class="bg-surface-container-low p-10 rounded-xl border border-[#F1F1F1] hover-shift hover:shadow-md col-span-1 lg:col-span-1 group" data-reveal>
-<div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-8 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-<span class="material-symbols-outlined text-white">brush</span>
-</div>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">The Studio Roots</h3>
-<p class="text-on-surface-variant font-body-md">
-                        We started with a pen, a desk, and a commitment to solving complex communication problems through pure design. Our DNA is rooted in the precision of layout and the power of typography.
-                    </p>
-</div>
-<!-- Card 2: The Evolution (Wide) -->
-<div class="bg-white p-10 rounded-xl border border-[#F1F1F1] editorial-shadow hover-shift col-span-1 md:col-span-2 lg:col-span-2 flex flex-col justify-between" data-reveal>
-<div>
-<h3 class="font-headline-md text-headline-md mb-6 text-primary">From Pixels to Production</h3>
-<p class="text-on-surface-variant font-body-lg mb-8 max-w-xl">
-                            Recognizing the gap between design intent and final delivery, we expanded our capabilities. Today, Graystonite manages the entire lifecycle of a project, ensuring the creative spark isn't lost in translation.
+    <!-- Card 1: The Origin -->
+    <div class="bg-white p-10 rounded-xl border-t-4 border-brand-magenta shadow-sm hover-shift hover:shadow-md col-span-1 lg:col-span-1 group" data-reveal>
+      <span class="inline-block font-label-bold text-label-bold text-brand-magenta mb-4">01. ORIGIN</span>
+      <h3 class="font-headline-md text-headline-md mb-4 text-primary">The Studio Roots</h3>
+      <p class="text-on-surface-variant font-body-md">
+                            We started with a pen, a desk, and a commitment to solving complex communication problems through pure design. Our DNA is rooted in the precision of layout and the power of typography.
                         </p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-<div class="text-center">
-<p class="font-headline-md text-brand-magenta" data-count="27">27</p>
-<p class="text-label-bold font-label-bold opacity-60">YEARS</p>
-</div>
-<div class="text-center">
-<p class="font-headline-md text-brand-magenta" data-count="4" data-suffix="k+">4k+</p>
-<p class="text-label-bold font-label-bold opacity-60">PROJECTS</p>
-</div>
-<div class="text-center">
-<p class="font-headline-md text-brand-magenta" data-count="100" data-suffix="%">100%</p>
-<p class="text-label-bold font-label-bold opacity-60">IN-HOUSE</p>
-</div>
-<div class="text-center">
-<p class="font-headline-md text-brand-magenta">Global</p>
-<p class="text-label-bold font-label-bold opacity-60">REACH</p>
-</div>
-</div>
-</div>
-<!-- Card 3: The Full Service (Wide Image) -->
-<div class="rounded-xl overflow-hidden border border-[#F1F1F1] col-span-1 lg:col-span-2 h-80 group" data-reveal>
-<img class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" data-alt="A wide-angle, bright interior shot of a modern, airy design and production studio. Designers are collaborating around a large wooden table with charcoal gray chairs, while in the background, high-end packaging prototypes are displayed on minimalist white shelves. The space is filled with natural light, clean lines, and a professional yet creative atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCifGLHN20d_CzMGWoCmlkpGOybGHWNWzxfA22Rx-HjuHD9GRccOgFXRozNbFJK6gjSLEjPbJ03fNo9fXK2HlSgpYDw1zE4Abk4fAoyQ5hwCQxxBTU73oozhlLCDmgkPuwaenGZms4-uJ2PDhP-MICJplwzFh1ZnkZdP643d4v7OgIyZeA5ABART59samoO8djHblrtZQO2450WV4xn5SrY5VROQ203UH2TaKvMCsiGdPNLZllmKqAqQ"/>
-</div>
-<!-- Card 4: Specialized Teams -->
-<div class="bg-surface-container-low p-10 rounded-xl border border-[#F1F1F1] hover-shift hover:shadow-md col-span-1" data-reveal>
-<h3 class="font-headline-md text-headline-md mb-4 text-primary">Unified Teams</h3>
-<p class="text-on-surface-variant font-body-md">
-                        We've built a multi-disciplinary team that speaks both "creative" and "technical." By housing design, print, and packaging experts together, we eliminate silos.
-                    </p>
-</div>
-</div>
+    </div>
+    <!-- Card 2: The Evolution (Wide) -->
+    <div class="bg-white p-10 rounded-xl border-t-4 border-secondary-container shadow-sm editorial-shadow hover-shift col-span-1 md:col-span-2 lg:col-span-2 flex flex-col justify-between" data-reveal>
+      <div>
+        <span class="inline-block font-label-bold text-label-bold text-secondary-container mb-4">02. EVOLUTION</span>
+        <h3 class="font-headline-md text-headline-md mb-6 text-primary">From Pixels to Production</h3>
+        <p class="text-on-surface-variant font-body-lg mb-8 max-w-xl">
+                                Recognizing the gap between design intent and final delivery, we expanded our capabilities. Today, Graystonite manages the entire lifecycle of a project, ensuring the creative spark isn't lost in translation.
+                            </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center">
+          <p class="font-headline-md text-brand-magenta" data-count="27">27</p>
+          <p class="text-label-bold font-label-bold opacity-60">YEARS</p>
+        </div>
+        <div class="text-center">
+          <p class="font-headline-md text-brand-magenta" data-count="4" data-suffix="k+">4k+</p>
+          <p class="text-label-bold font-label-bold opacity-60">PROJECTS</p>
+        </div>
+        <div class="text-center">
+          <p class="font-headline-md text-brand-magenta" data-count="100" data-suffix="%">100%</p>
+          <p class="text-label-bold font-label-bold opacity-60">IN-HOUSE</p>
+        </div>
+        <div class="text-center">
+          <p class="font-headline-md text-brand-magenta">Global</p>
+          <p class="text-label-bold font-label-bold opacity-60">REACH</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3: The Full Service (Wide Image) -->
+    <div class="rounded-xl overflow-hidden border-t-4 border-on-tertiary-container shadow-sm col-span-1 lg:col-span-2 h-80 group" data-reveal>
+      <img class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105" data-alt="A wide-angle, bright interior shot of a modern, airy design and production studio. Designers are collaborating around a large wooden table with charcoal gray chairs, while in the background, high-end packaging prototypes are displayed on minimalist white shelves. The space is filled with natural light, clean lines, and a professional yet creative atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCifGLHN20d_CzMGWoCmlkpGOybGHWNWzxfA22Rx-HjuHD9GRccOgFXRozNbFJK6gjSLEjPbJ03fNo9fXK2HlSgpYDw1zE4Abk4fAoyQ5hwCQxxBTU73oozhlLCDmgkPuwaenGZms4-uJ2PDhP-MICJplwzFh1ZnkZdP643d4v7OgIyZeA5ABART59samoO8djHblrtZQO2450WV4xn5SrY5VROQ203UH2TaKvMCsiGdPNLZllmKqAqQ"/>
+    </div>
+    <!-- Card 4: Specialized Teams -->
+    <div class="bg-white p-10 rounded-xl border-t-4 border-brand-magenta shadow-sm hover-shift hover:shadow-md col-span-1" data-reveal>
+      <span class="inline-block font-label-bold text-label-bold text-brand-magenta mb-4">03. TEAMS</span>
+      <h3 class="font-headline-md text-headline-md mb-4 text-primary">Unified Teams</h3>
+      <p class="text-on-surface-variant font-body-md">
+                            We've built a multi-disciplinary team that speaks both "creative" and "technical." By housing design, print, and packaging experts together, we eliminate silos.
+                        </p>
+    </div>
+  </div>
 </section>
 <!-- End-to-End Approach Section -->
 <section class="bg-surface-container-low py-section-padding overflow-hidden relative">
@@ -338,20 +404,56 @@
 </div>
 </section>
 <!-- CTA Section -->
-<section class="bg-primary text-on-primary py-section-padding px-gutter">
-<div class="max-w-container-max mx-auto text-center">
-<h2 class="font-headline-lg text-headline-lg mb-8">Ready to bring your concept to completion?</h2>
-<p class="font-body-lg text-body-lg mb-12 opacity-80 max-w-2xl mx-auto">
-                    Let's discuss how nearly three decades of design expertise can elevate your brand's communication strategy.
-                </p>
-<div class="flex flex-col md:flex-row justify-center gap-6">
-<a class="inline-block bg-white text-primary px-10 py-4 rounded-full font-label-bold text-label-bold hover:scale-105 transition-transform" href="contact.html">
-                        Schedule a Consultation
-                    </a>
-<a class="inline-block border-b-2 border-secondary-container text-white px-6 py-4 font-label-bold text-label-bold hover:text-secondary-container transition-colors" href="services.html">
-                        Explore Services
-                    </a>
-</div>
+<section class="bg-surface-container-low py-section-padding px-gutter overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+  <!-- Left content -->
+  <div class="space-y-8 max-w-xl" data-stagger>
+    <span class="inline-block self-start px-3 py-1 rounded-full bg-brand-magenta/10 text-brand-magenta font-label-bold text-label-bold" data-reveal>LET'S TALK</span>
+    <h2 class="font-headline-xl text-headline-xl text-primary leading-tight" data-reveal>
+      Ready to bring your <span class="text-brand-magenta">concept</span> to completion?
+    </h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed" data-reveal>
+      Let's discuss how nearly three decades of design expertise can elevate your brand's communication strategy.
+    </p>
+    <div class="flex flex-wrap gap-4" data-reveal>
+      <a href="contact.html" class="group relative inline-block px-8 py-4 bg-primary text-on-primary rounded-xl font-label-bold text-label-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <span class="relative z-10">Schedule a Consultation</span>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+      </a>
+      <a href="services.html" class="group relative inline-block px-8 py-4 bg-surface text-primary rounded-xl font-label-bold text-label-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg border border-outline-variant/40">
+        <span class="relative z-10">Explore Services</span>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Right: vertical marquee -->
+  <div id="cta-marquee-wrap" class="relative h-[420px] md:h-[500px] flex items-center justify-center" data-reveal style="--d:0.15s">
+    <div class="relative w-full h-full overflow-hidden">
+      <div id="cta-marquee" class="group flex flex-col h-full">
+        <div class="cta-marquee-track flex shrink-0 flex-col">
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Enterprise Brands</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Creative Directors</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Packaging Teams</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Print Studios</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Marketing Leads</div>
+        </div>
+        <div class="cta-marquee-track flex shrink-0 flex-col" aria-hidden="true">
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Enterprise Brands</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Creative Directors</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Packaging Teams</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Print Studios</div>
+          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Marketing Leads</div>
+        </div>
+      </div>
+      <!-- Top vignette -->
+      <div class="pointer-events-none absolute top-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-b from-surface-container-low via-surface-container-low/60 to-transparent z-10"></div>
+      <!-- Bottom vignette -->
+      <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-t from-surface-container-low via-surface-container-low/60 to-transparent z-10"></div>
+    </div>
+  </div>
+
 </div>
 </section>
 <!-- Footer -->
@@ -451,5 +553,35 @@
             if (window.scrollY > 50) header.classList.add('shadow-md', 'backdrop-blur-md');
             else header.classList.remove('shadow-md', 'backdrop-blur-md');
         });
+
+        // ---- CTA vertical marquee: center-fade opacity ----
+        (function () {
+            const wrap = document.getElementById('cta-marquee-wrap');
+            const marquee = document.getElementById('cta-marquee');
+            if (!wrap || !marquee) return;
+            if (reduceMotion) return;
+
+            function updateOpacity() {
+                const items = wrap.querySelectorAll('.marquee-item');
+                const containerRect = wrap.getBoundingClientRect();
+                const centerY = containerRect.top + containerRect.height / 2;
+
+                items.forEach((item) => {
+                    const itemRect = item.getBoundingClientRect();
+                    const itemCenterY = itemRect.top + itemRect.height / 2;
+                    const distance = Math.abs(centerY - itemCenterY);
+                    const maxDistance = containerRect.height / 2;
+                    const normalizedDistance = Math.min(distance / maxDistance, 1);
+                    const opacity = 1 - normalizedDistance * 0.75;
+                    item.style.opacity = opacity.toString();
+                });
+            }
+
+            function loop() {
+                updateOpacity();
+                requestAnimationFrame(loop);
+            }
+            requestAnimationFrame(loop);
+        })();
     </script>
 </body></html>
