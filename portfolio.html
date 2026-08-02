@@ -127,23 +127,16 @@
             border-color: #161717;
         }
 
-        /* ---- CTA vertical marquee ---- */
-        #cta-marquee {
-            animation: marqueeScrollUp 22s linear infinite;
-            will-change: transform;
+        /* ---- Vertical marquee (CTA section) ---- */
+        .cta-marquee-track {
+            animation: marqueeVertical 10s linear infinite;
         }
-        #cta-marquee-wrap:hover #cta-marquee {
-            animation-play-state: paused;
-        }
-        @keyframes marqueeScrollUp {
+        @keyframes marqueeVertical {
             from { transform: translateY(0); }
-            to   { transform: translateY(-50%); }
-        }
-        .marquee-item {
-            border-bottom: 1px solid rgba(22, 23, 23, 0.08);
+            to   { transform: translateY(-100%); }
         }
         @media (prefers-reduced-motion: reduce) {
-            #cta-marquee { animation: none; }
+            .cta-marquee-track { animation: none !important; }
         }
     </style>
 </head>
@@ -464,6 +457,8 @@
 </div>
 </footer>
 <script>
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
         // Category filter
         (function () {
             const bar = document.getElementById('filterBar');
@@ -487,6 +482,36 @@
                 });
                 if (empty) empty.classList.toggle('hidden', shown !== 0);
             });
+        })();
+
+        // ---- CTA vertical marquee: center-fade opacity ----
+        (function () {
+            const wrap = document.getElementById('cta-marquee-wrap');
+            const marquee = document.getElementById('cta-marquee');
+            if (!wrap || !marquee) return;
+            if (reduceMotion) return;
+
+            function updateOpacity() {
+                const items = wrap.querySelectorAll('.marquee-item');
+                const containerRect = wrap.getBoundingClientRect();
+                const centerY = containerRect.top + containerRect.height / 2;
+
+                items.forEach((item) => {
+                    const itemRect = item.getBoundingClientRect();
+                    const itemCenterY = itemRect.top + itemRect.height / 2;
+                    const distance = Math.abs(centerY - itemCenterY);
+                    const maxDistance = containerRect.height / 2;
+                    const normalizedDistance = Math.min(distance / maxDistance, 1);
+                    const opacity = 1 - normalizedDistance * 0.75;
+                    item.style.opacity = opacity.toString();
+                });
+            }
+
+            function loop() {
+                updateOpacity();
+                requestAnimationFrame(loop);
+            }
+            requestAnimationFrame(loop);
         })();
     </script>
 </body></html>

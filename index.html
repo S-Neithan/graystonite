@@ -1,312 +1,239 @@
 <!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Graystonite | From Concept to Completion</title>
 
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Graystonite | From Concept to Completion</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Work+Sans:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-error": "#ffffff",
-                        "primary": "#161717",
-                        "tertiary-container": "#003130",
-                        "on-primary-fixed-variant": "#474746",
-                        "on-secondary-fixed": "#311400",
-                        "inverse-on-surface": "#f4f0ef",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-container": "#ff8927",
-                        "on-tertiary-container": "#0fa3a0",
-                        "surface-container": "#f1edec",
-                        "surface": "#fdf8f8",
-                        "secondary-fixed-dim": "#ffb786",
-                        "surface-container-high": "#ebe7e7",
-                        "on-tertiary": "#ffffff",
-                        "on-background": "#1c1b1b",
-                        "tertiary-fixed": "#7ff5f1",
-                        "tertiary-fixed-dim": "#60d9d5",
-                        "on-secondary": "#ffffff",
-                        "background": "#fdf8f8",
-                        "surface-bright": "#fdf8f8",
-                        "outline-variant": "#c4c7c7",
-                        "secondary": "#964900",
-                        "on-primary-fixed": "#1b1c1c",
-                        "on-error-container": "#93000a",
-                        "primary-container": "#2b2b2b",
-                        "on-surface-variant": "#444748",
-                        "error": "#ba1a1a",
-                        "on-surface": "#1c1b1b",
-                        "surface-container-low": "#f7f3f2",
-                        "tertiary": "#001a1a",
-                        "inverse-primary": "#c8c6c5",
-                        "on-secondary-container": "#642f00",
-                        "inverse-surface": "#313030",
-                        "primary-fixed-dim": "#c8c6c5",
-                        "on-primary": "#ffffff",
-                        "surface-variant": "#e5e2e1",
-                        "outline": "#747878",
-                        "primary-fixed": "#e4e2e1",
-                        "secondary-fixed": "#ffdcc6",
-                        "on-tertiary-fixed-variant": "#00504e",
-                        "surface-dim": "#ddd9d8",
-                        "on-secondary-fixed-variant": "#723600",
-                        "error-container": "#ffdad6",
-                        "surface-container-highest": "#e5e2e1",
-                        "on-primary-container": "#939292",
-                        "surface-tint": "#5f5e5e",
-                        "on-tertiary-fixed": "#00201f",
-                        "accent-magenta": "#D81B60"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "section-padding": "120px",
-                        "container-max": "1280px",
-                        "margin-mobile": "20px",
-                        "gutter": "32px",
-                        "unit": "8px"
-                    },
-                    "fontFamily": {
-                        "headline-xl": ["Hanken Grotesk"],
-                        "body-md": ["Work Sans"],
-                        "headline-lg-mobile": ["Hanken Grotesk"],
-                        "headline-lg": ["Hanken Grotesk"],
-                        "body-lg": ["Work Sans"],
-                        "label-bold": ["Hanken Grotesk"],
-                        "headline-md": ["Hanken Grotesk"]
-                    },
-                    "fontSize": {
-                        "headline-xl": ["60px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                        "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
-                    }
-                },
-            },
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .creative-spark-orange { border-bottom: 2px solid #ff8927; }
-        .creative-spark-teal { border-bottom: 2px solid #0fa3a0; }
-        .creative-spark-magenta { border-bottom: 2px solid #D81B60; }
+  <!-- Fonts (one consolidated request instead of three overlapping ones) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Work+Sans:wght@100..900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    rel="stylesheet"
+  />
 
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 32px;
-        }
+  <!-- Tailwind (CDN build) + theme config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+// Graystonite — Tailwind theme configuration
+// Extracted from inline <script> so the design system lives in one
+// versioned file instead of being buried in the page markup.
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-error": "#ffffff",
+        "primary": "#161717",
+        "tertiary-container": "#003130",
+        "on-primary-fixed-variant": "#474746",
+        "on-secondary-fixed": "#311400",
+        "inverse-on-surface": "#f4f0ef",
+        "surface-container-lowest": "#ffffff",
+        "secondary-container": "#ff8927",
+        "on-tertiary-container": "#0fa3a0",
+        "surface-container": "#f1edec",
+        "surface": "#fdf8f8",
+        "secondary-fixed-dim": "#ffb786",
+        "surface-container-high": "#ebe7e7",
+        "on-tertiary": "#ffffff",
+        "on-background": "#1c1b1b",
+        "tertiary-fixed": "#7ff5f1",
+        "tertiary-fixed-dim": "#60d9d5",
+        "on-secondary": "#ffffff",
+        "background": "#fdf8f8",
+        "surface-bright": "#fdf8f8",
+        "outline-variant": "#c4c7c7",
+        "secondary": "#964900",
+        "on-primary-fixed": "#1b1c1c",
+        "on-error-container": "#93000a",
+        "primary-container": "#2b2b2b",
+        "on-surface-variant": "#444748",
+        "error": "#ba1a1a",
+        "on-surface": "#1c1b1b",
+        "surface-container-low": "#f7f3f2",
+        "tertiary": "#001a1a",
+        "inverse-primary": "#c8c6c5",
+        "on-secondary-container": "#642f00",
+        "inverse-surface": "#313030",
+        "primary-fixed-dim": "#c8c6c5",
+        "on-primary": "#ffffff",
+        "surface-variant": "#e5e2e1",
+        "outline": "#747878",
+        "primary-fixed": "#e4e2e1",
+        "secondary-fixed": "#ffdcc6",
+        "on-tertiary-fixed-variant": "#00504e",
+        "surface-dim": "#ddd9d8",
+        "on-secondary-fixed-variant": "#723600",
+        "error-container": "#ffdad6",
+        "surface-container-highest": "#e5e2e1",
+        "on-primary-container": "#939292",
+        "surface-tint": "#5f5e5e",
+        "on-tertiary-fixed": "#00201f",
+        "accent-magenta": "#D81B60",
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        full: "9999px",
+      },
+      spacing: {
+        "section-padding": "120px",
+        "container-max": "1280px",
+        "margin-mobile": "20px",
+        gutter: "32px",
+        unit: "8px",
+      },
+      fontFamily: {
+        "headline-xl": ["Hanken Grotesk"],
+        "body-md": ["Work Sans"],
+        "headline-lg-mobile": ["Hanken Grotesk"],
+        "headline-lg": ["Hanken Grotesk"],
+        "body-lg": ["Work Sans"],
+        "label-bold": ["Hanken Grotesk"],
+        "headline-md": ["Hanken Grotesk"],
+      },
+      fontSize: {
+        "headline-xl": ["60px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800" }],
+        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+        "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+        "headline-lg": ["48px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700" }],
+        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+        "label-bold": ["14px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "700" }],
+        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+      },
+    },
+  },
+};
+  </script>
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid #F1F1F1;
-        }
+  <!-- Site styles -->
+  <style>
+/* ==========================================================================
+   Graystonite — custom styles
+   Everything Tailwind's utility classes can't express: icon defaults,
+   brand underline accents, the bento grid, glassmorphism, scroll-reveal
+   animation, the hero card stack, and the CTA marquee.
+   ========================================================================== */
 
-        .hero-gradient {
-            background: radial-gradient(circle at 10% 20%, rgba(255, 137, 39, 0.05) 0%, rgba(255, 255, 255, 0) 50%),
-                        radial-gradient(circle at 90% 80%, rgba(15, 163, 160, 0.05) 0%, rgba(255, 255, 255, 0) 50%);
-            background-size: 160% 160%;
-            animation: heroDrift 22s ease-in-out infinite;
-        }
-        @keyframes heroDrift {
-            0%   { background-position: 0%   0%; }
-            50%  { background-position: 100% 100%; }
-            100% { background-position: 0%   0%; }
-        }
+/* ---- Material icons default axes ---- */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
 
-        /* ---- Scroll reveal ---- */
-        .js [data-reveal] { opacity: 0; }
-        .js [data-reveal].in-view {
-            animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            animation-delay: var(--d, 0s);
-        }
-        .js [data-reveal].reveal-done { animation: none; opacity: 1; }
-        @keyframes revealUp {
-            from { opacity: 0; transform: translateY(26px); }
-            to   { opacity: 1; transform: none; }
-        }
+/* ---- Brand underline accents (used under CTA links) ---- */
+.creative-spark-orange { border-bottom: 2px solid #ff8927; }
+.creative-spark-teal { border-bottom: 2px solid #0fa3a0; }
+.creative-spark-magenta { border-bottom: 2px solid #D81B60; }
 
-        /* ---- Ambient float on decorative blobs ---- */
-        .floaty      { animation: floaty 8s  ease-in-out infinite; }
-        .floaty-slow { animation: floaty 12s ease-in-out infinite; }
-        @keyframes floaty {
-            0%, 100% { transform: translateY(0); }
-            50%      { transform: translateY(-16px); }
-        }
+/* ---- Bento grid (Technical Edge section) ---- */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
 
-        /* ---- Underline-grow on nav links ---- */
-        .nav-link { position: relative; }
-        .nav-link::after {
-            content: "";
-            position: absolute;
-            left: 0; bottom: -2px;
-            height: 2px; width: 0;
-            background-color: #ff8927;
-            transition: width 0.25s ease;
-        }
-        .nav-link:hover::after { width: 100%; }
+/* ---- Generic glass card utility ---- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid #F1F1F1;
+}
 
-        /* ---- Service tab cards ---- */
-        .svc-tab { cursor: pointer; }
-        .svc-tab[data-active="true"] {
-            border-color: #161717;
-            box-shadow: 0 10px 25px -8px rgba(22,23,23,0.18);
-        }
-        .svc-fade {
-            animation: svcFade 0.4s ease both;
-        }
-        @keyframes svcFade {
-            from { opacity: 0; transform: translateY(8px); }
-            to   { opacity: 1; transform: none; }
-        }
+/* ---- Hero background drift ---- */
+.hero-gradient {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 137, 39, 0.05) 0%, rgba(255, 255, 255, 0) 50%),
+    radial-gradient(circle at 90% 80%, rgba(15, 163, 160, 0.05) 0%, rgba(255, 255, 255, 0) 50%);
+  background-size: 160% 160%;
+  animation: heroDrift 22s ease-in-out infinite;
+}
+@keyframes heroDrift {
+  0%   { background-position: 0%   0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0%   0%; }
+}
 
-        @media (prefers-reduced-motion: reduce) {
-            .js [data-reveal] { opacity: 1 !important; animation: none !important; }
-            .hero-gradient, .floaty, .floaty-slow { animation: none !important; }
-            .svc-fade { animation: none !important; }
-            html { scroll-behavior: auto; }
-        }
+/* ---- Scroll reveal ---- */
+.js [data-reveal] { opacity: 0; }
+.js [data-reveal].in-view {
+  animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--d, 0s);
+}
+.js [data-reveal].reveal-done { animation: none; opacity: 1; }
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: none; }
+}
 
-        /* ---- Vertical marquee (CTA section) ---- */
-        .cta-marquee-track {
-            animation: marqueeVertical 10s linear infinite;
-        }
-        @keyframes marqueeVertical {
-            from { transform: translateY(0); }
-            to   { transform: translateY(-100%); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .cta-marquee-track { animation: none !important; }
-        }
-    </style>
-</head>
-<body class="bg-surface text-primary font-body-md selection:bg-secondary-container selection:text-white">
-<!-- TopNavBar -->
-<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim shadow-sm transition-shadow duration-300">
-<nav class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
-<a class="flex items-center transition-transform duration-200 hover:scale-105" href="index.html">
-<img alt="Graystonite Logo" class="h-10 w-auto" src="assets/img/graystonite-logo.png"/>
-</a>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-primary font-bold border-b-2 border-secondary-container pb-1 font-body-md text-body-md" href="index.html">Home</a>
-<a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="about.html">About</a>
-<a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="services.html">Services</a>
-<a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="portfolio.html">Portfolio</a>
-<a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="contact.html">Contact</a>
-</div>
-<a class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-bold text-label-bold transition-transform duration-150 hover:scale-105" href="contact.html">Get in Touch</a>
-</nav>
-</header>
-<main>
-<!-- Hero Section -->
-<section class="relative min-h-[85vh] flex items-center overflow-hidden hero-gradient">
-  <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-x-16 gap-y-gutter items-center py-section-padding">
+/* ---- Ambient float on decorative blobs ---- */
+.floaty      { animation: floaty 8s  ease-in-out infinite; }
+.floaty-slow { animation: floaty 12s ease-in-out infinite; }
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-16px); }
+}
 
-    <div class="md:col-span-6 space-y-8" data-stagger>
-      <div class="inline-flex items-center px-4 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold" data-reveal>
-        <span class="mr-2">EST. 1997</span>
-        <div class="w-1 h-1 rounded-full bg-secondary"></div>
-        <span class="ml-2">DESIGN EXCELLENCE</span>
-      </div>
-      <h1 class="font-headline-xl text-headline-xl text-primary leading-none" data-reveal>
-        YOUR VISION, ENGENEERED FOR <br/><span class="text-secondary-container">REALITY.</span>
-      </h1>
-      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl" data-reveal>
-        We don't just design what looks right — we design what works, prints, folds, etches, and holds up at scale. 27 years bridging creative vision and technical execution for enterprise partners worldwide.
-      </p>
-      <div class="flex flex-wrap gap-6 pt-4" data-reveal>
-        <a class="inline-block bg-primary text-on-primary px-8 py-4 rounded-xl font-label-bold text-label-bold transition-all hover:translate-y-[-4px] shadow-lg shadow-primary/10" href="contact.html">
-          Start Your Project
-        </a>
-        <a class="inline-block bg-transparent text-primary px-2 py-4 font-label-bold text-label-bold creative-spark-orange transition-all hover:pr-6" href="portfolio.html">
-          View Case Studies
-        </a>
-      </div>
-    </div>
+/* ---- Underline-grow on nav links ---- */
+.nav-link { position: relative; }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  height: 2px; width: 0;
+  background-color: #ff8927;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after { width: 100%; }
 
-<!-- Card Stack -->
-<div class="md:col-span-6 relative hidden md:block" data-reveal style="--d:0.25s">
-  <div class="relative w-full aspect-[4/3] flex items-center justify-center pb-24 pl-8">
+/* ---- Service tab cards (interactive panel) ---- */
+.svc-tab { cursor: pointer; }
+.svc-tab[data-active="true"] {
+  border-color: #161717;
+  box-shadow: 0 10px 25px -8px rgba(22, 23, 23, 0.18);
+}
+.svc-fade { animation: svcFade 0.4s ease both; }
+@keyframes svcFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
 
-    <!-- Back Card (always stays behind) -->
-    <div class="hero-card-wrap hero-card-back-wrap">
-      <img
-        src="https://images.unsplash.com/photo-1663433453056-8afb0da56588?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"
-        alt="Close-up of a circuit board — technical precision"
-        class="hero-card hero-card-back h-48 md:h-72 w-full rounded-2xl object-cover border border-outline-variant"
-      />
-    </div>
+/* ---- Hero image card stack ---- */
+.hero-card-wrap {
+  position: absolute;
+  width: 50%;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+.hero-card {
+  display: block;
+  width: 100%;
+  box-shadow: 0 25px 35px -10px rgba(0, 0, 0, 0.35), 0 10px 15px -6px rgba(0, 0, 0, 0.2);
+}
 
-    <!-- Front Card (always on top) -->
-    <div class="hero-card-wrap hero-card-front-wrap">
-      <img
-        src="https://images.unsplash.com/photo-1642480532034-362360552ccb?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"
-        alt="Pantone color swatch book — precision color matching"
-        class="hero-card hero-card-front h-48 md:h-72 w-full rounded-2xl object-cover border border-outline-variant"
-      />
-    </div>
+/* Static resting position — horizontal separation between the two cards */
+.hero-card-back-wrap {
+  transform: translateX(6rem) translateY(-2rem) rotate(-6deg);
+  z-index: 1; /* always behind */
+}
+.hero-card-front-wrap {
+  transform: translateX(-4rem) translateY(2rem) rotate(6deg);
+  z-index: 3; /* always on top */
+}
 
-    <!-- Stat overlay -->
-    <div class="hero-stat-glass p-6 rounded-2xl shadow-2xl max-w-[240px] absolute bottom-0 left-0 z-20">
-      <p class="font-headline-md text-headline-md text-primary leading-tight mb-2" data-count="98" data-suffix="%">98%</p>
-      <p class="text-body-md text-on-surface-variant">Client retention rate over three decades of partnership.</p>
-    </div>
-  </div>
-</div>
+/* Hover: lift + increase rotation only — no z-index change on back card */
+.hero-card-back-wrap:hover {
+  transform: translateX(6rem) translateY(-2.8rem) rotate(-10deg);
+}
+.hero-card-front-wrap:hover {
+  transform: translateX(-4rem) translateY(1.2rem) rotate(10deg);
+}
 
-  </div>
-</section>
-
-<style>
-  .hero-card-wrap {
-    position: absolute;
-    width: 50%;
-    transition: transform 0.3s ease;
-    will-change: transform;
-  }
-
-  .hero-card {
-    display: block;
-    width: 100%;
-    box-shadow: 0 25px 35px -10px rgba(0, 0, 0, 0.35), 0 10px 15px -6px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Static resting position — more horizontal separation between the two cards */
-  .hero-card-back-wrap {
-    transform: translateX(6rem) translateY(-2rem) rotate(-6deg);
-    z-index: 1; /* always behind */
-  }
-  .hero-card-front-wrap {
-    transform: translateX(-4rem) translateY(2rem) rotate(6deg);
-    z-index: 3; /* always on top */
-  }
-
-  /* Hover: lift + increase rotation only — no z-index change on back card */
-  .hero-card-back-wrap:hover {
-    transform: translateX(6rem) translateY(-2.8rem) rotate(-10deg);
-  }
-  .hero-card-front-wrap:hover {
-    transform: translateX(-4rem) translateY(1.2rem) rotate(10deg);
-  }
-
-/* Intensified glass effect for the stat card */
+/* ---- Hero stat glass panel ---- */
 .hero-stat-glass {
+  position: relative;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 100%);
   backdrop-filter: blur(24px) saturate(200%);
   -webkit-backdrop-filter: blur(24px) saturate(200%);
@@ -323,9 +250,7 @@
 .hero-stat-glass::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: 50%;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
   pointer-events: none;
@@ -335,10 +260,8 @@
 .hero-stat-glass::after {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -20%;
-  width: 40%;
-  height: 200%;
+  top: -50%; left: -20%;
+  width: 40%; height: 200%;
   background: linear-gradient(115deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 100%);
   transform: rotate(15deg);
   pointer-events: none;
@@ -349,568 +272,689 @@
   z-index: 1;
 }
 
-  @media (prefers-reduced-motion: reduce) {
-    .hero-card-wrap { transition: none; }
+/* ---- Vertical marquee (CTA section) ---- */
+.cta-marquee-track {
+  animation: marqueeVertical 10s linear infinite;
+}
+@keyframes marqueeVertical {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-100%); }
+}
+
+/* ---- Reduced motion: disable all decorative animation/transition ---- */
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal] { opacity: 1 !important; animation: none !important; }
+  .hero-gradient, .floaty, .floaty-slow { animation: none !important; }
+  .svc-fade { animation: none !important; }
+  .cta-marquee-track { animation: none !important; }
+  .hero-card-wrap { transition: none; }
+  html { scroll-behavior: auto; }
+}
+  </style>
+</head>
+
+<body class="bg-surface text-primary font-body-md selection:bg-secondary-container selection:text-white">
+
+  <!-- ============================== Top Nav ============================== -->
+  <header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim shadow-sm transition-shadow duration-300">
+    <nav class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+      <a class="flex items-center transition-transform duration-200 hover:scale-105" href="index.html">
+        <img alt="Graystonite Logo" class="h-10 w-auto" src="assets/img/graystonite-logo.png" />
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a class="text-primary font-bold border-b-2 border-secondary-container pb-1 font-body-md text-body-md" href="index.html">Home</a>
+        <a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="about.html">About</a>
+        <a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="services.html">Services</a>
+        <a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="portfolio.html">Portfolio</a>
+        <a class="nav-link text-on-surface-variant font-normal hover:text-secondary-container transition-colors duration-200 font-body-md text-body-md" href="contact.html">Contact</a>
+      </div>
+      <a class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-bold text-label-bold transition-transform duration-150 hover:scale-105" href="contact.html">Get in Touch</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================== Hero ============================== -->
+    <section id="hero" class="relative min-h-[85vh] flex items-center overflow-hidden hero-gradient">
+      <div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-x-16 gap-y-gutter items-center py-section-padding">
+
+        <div class="md:col-span-6 space-y-8" data-stagger>
+          <div class="inline-flex items-center px-4 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold" data-reveal>
+            <span class="mr-2">EST. 1997</span>
+            <div class="w-1 h-1 rounded-full bg-secondary"></div>
+            <span class="ml-2">DESIGN EXCELLENCE</span>
+          </div>
+          <h1 class="font-headline-xl text-headline-xl text-primary leading-none" data-reveal>
+            YOUR VISION, ENGINEERED FOR <br /><span class="text-secondary-container">REALITY.</span>
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl" data-reveal>
+            We don't just design what looks right — we design what works, prints, folds, etches, and holds up at scale. 27 years bridging creative vision and technical execution for enterprise partners worldwide.
+          </p>
+          <div class="flex flex-wrap gap-6 pt-4" data-reveal>
+            <a class="inline-block bg-primary text-on-primary px-8 py-4 rounded-xl font-label-bold text-label-bold transition-all hover:translate-y-[-4px] shadow-lg shadow-primary/10" href="contact.html">
+              Start Your Project
+            </a>
+            <a class="inline-block bg-transparent text-primary px-2 py-4 font-label-bold text-label-bold creative-spark-orange transition-all hover:pr-6" href="portfolio.html">
+              View Case Studies
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero image card stack -->
+        <div class="md:col-span-6 relative hidden md:block" data-reveal style="--d:0.25s">
+          <div class="relative w-full aspect-[4/3] flex items-center justify-center pb-24 pl-8">
+
+            <div class="hero-card-wrap hero-card-back-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1663433453056-8afb0da56588?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"
+                alt="Close-up of a circuit board — technical precision"
+                class="hero-card hero-card-back h-48 md:h-72 w-full rounded-2xl object-cover border border-outline-variant"
+              />
+            </div>
+
+            <div class="hero-card-wrap hero-card-front-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1642480532034-362360552ccb?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"
+                alt="Pantone color swatch book — precision color matching"
+                class="hero-card hero-card-front h-48 md:h-72 w-full rounded-2xl object-cover border border-outline-variant"
+              />
+            </div>
+
+            <div class="hero-stat-glass p-6 rounded-2xl shadow-2xl max-w-[240px] absolute bottom-0 left-0 z-20">
+              <p class="font-headline-md text-headline-md text-primary leading-tight mb-2" data-count="98" data-suffix="%">98%</p>
+              <p class="text-body-md text-on-surface-variant">Client retention rate over three decades of partnership.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== Services (interactive panel) ===================== -->
+    <section id="services" class="bg-surface py-section-padding">
+      <div class="max-w-container-max mx-auto px-gutter">
+
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6" data-reveal>
+          <div class="max-w-2xl">
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Crafting Visual Legacies</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">Comprehensive design solutions tailored for the corporate modern world.</p>
+          </div>
+          <div class="flex gap-2">
+            <div class="w-12 h-1 bg-secondary-container rounded-full"></div>
+            <div class="w-4 h-1 bg-on-tertiary-container rounded-full"></div>
+            <div class="w-4 h-1 bg-accent-magenta rounded-full"></div>
+          </div>
+        </div>
+
+        <!-- Text + image panel, driven by the tabs below (see assets/js/main.js) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16" data-reveal>
+          <div id="svc-text-col" class="svc-fade">
+            <div id="svc-eyebrow" class="inline-flex items-center px-4 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold mb-6">
+              <span id="svc-icon" class="material-symbols-outlined text-[16px] mr-2">token</span>
+              <span id="svc-eyebrow-text">SERVICE</span>
+            </div>
+            <h3 id="svc-title" class="font-headline-xl text-headline-xl text-primary leading-[1.05] tracking-tight mb-6">Branding &amp; <span id="svc-title-accent" class="text-secondary-container">Design.</span></h3>
+            <p id="svc-desc" class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-10">Identity systems that command attention and build long-term brand equity.</p>
+            <div class="flex flex-wrap items-center gap-6">
+              <a id="svc-cta-primary" href="services.html" class="inline-block bg-primary text-on-primary px-8 py-4 rounded-xl font-label-bold text-label-bold transition-all hover:translate-y-[-4px] shadow-lg shadow-primary/10">Start This Project</a>
+              <a id="svc-link" href="services.html" class="inline-block creative-spark-orange font-label-bold text-label-bold py-1 transition-all hover:pr-3">Explore Identity</a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="h-[320px] rounded-xl overflow-hidden border border-surface-container-high shadow-lg">
+              <img id="svc-image" src="https://images.unsplash.com/photo-1600508774634-4e11d34730e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Branding and design work" class="w-full h-full object-cover transition-opacity duration-500" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs: click a service to update the panel above (rendered by assets/js/main.js) -->
+        <div id="svc-tabs" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4" data-stagger></div>
+      </div>
+    </section>
+
+    <!-- ============================== Why Graystonite ============================== -->
+    <section id="why-graystonite" class="py-section-padding px-gutter max-w-container-max mx-auto overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+        <div class="lg:col-span-7" data-stagger>
+          <span class="inline-block px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold mb-6" data-reveal>WHY GRAYSTONITE</span>
+          <h1 class="font-headline-xl text-headline-xl text-primary mb-8 leading-tight" data-reveal>
+            Know-how most studios <br /><span class="text-secondary-container">don't have.</span>
+          </h1>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl" data-reveal>
+            With nearly three decades of hands-on experience, we bridge the gap between creative vision and technical execution. We don't just design; we understand the chemistry of the ink, the tension of the screen, and the architecture of the board.
+          </p>
+          <div class="flex flex-wrap gap-4" data-reveal>
+            <a class="inline-block bg-primary text-on-primary px-8 py-4 rounded-lg font-label-bold text-label-bold transition-transform hover:-translate-y-1" href="contact.html">
+              Start Your Project
+            </a>
+            <a class="inline-block px-8 py-4 font-label-bold text-label-bold creative-spark-teal transition-all hover:pr-6 hover:text-on-tertiary-container" href="portfolio.html">
+              View Our Portfolio
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 relative h-[500px] hidden lg:block" data-reveal style="--d:0.2s">
+          <div class="absolute inset-0 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant/30 group">
+            <div
+              class="w-full h-full bg-cover bg-center transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+              data-alt="A macro close-up shot of a high-end printing press in operation, showing fine details of cyan ink droplets on a textured paper surface. The lighting is crisp and professional, highlighting the industrial precision. The background shows a modern, airy studio environment with charcoal gray accents and bright white walls."
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCg7lQ7rb6DZDXONJUQ-ZFOTea2gvb3w6_XUl64lVxMJO4MuZ_GGO_1dwElRRdoFUFFBOFO5paiYAixSWqw8p8uR9tkfpqfsaFbRwSQCnSPyjS51TpXOhPwfBjvzqT91jVJoF1sK8ypWPSSDMGFQM39C-5QSk88cpY6qk4rxZyn_pGuD18A2IHRD5kJhshJCkH5mx2bDi-WCEMEadKpEXk0jp_GMxjyhbNnJnhZYmkCBhMpv6XtN2z-WQ')"
+            ></div>
+          </div>
+          <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-tertiary-fixed-dim/20 rounded-full blur-3xl -z-10 floaty"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== Proof Points ============================== -->
+    <section id="proof" class="bg-surface text-primary py-section-padding overflow-hidden">
+      <div class="max-w-container-max mx-auto px-gutter">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:items-stretch items-start">
+
+          <div class="lg:col-span-5 hidden lg:block">
+            <div class="h-full w-full rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container-high relative group">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS6C81NCpa5IL8YGEw5DxmO3eCtz50FpP8JpTMPHPcDbDIBz_Aa-sMGFf1t0wQQAZqTFxxm5i-droPPtWqGmXq3m1DyguOMScpSehrc2iMC69blTDZdRqsGIYa1Tyt9L-7fagGlvZJGpUoxHcgqthvwxYT3aRWKIrfLGl4Yd3qoYZXJzP6VlOo4B-PZb-ox-ML8817gGtxQ_QRIfnpq_U5ByDZUePLJTGeqogp8RZ9V77m-tt-tDPcXg"
+                alt="Studio building photo"
+                class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                style="min-height:420px;"
+              />
+              <div class="absolute -top-6 -right-6 w-32 h-32 bg-secondary-container rounded-full opacity-20 blur-3xl pointer-events-none"></div>
+              <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-on-tertiary-container rounded-full opacity-10 blur-3xl pointer-events-none"></div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 flex flex-col justify-center h-full" data-stagger>
+            <span class="inline-block self-start px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold mb-6" data-reveal>
+              PROOF POINTS
+            </span>
+
+            <h2 class="font-headline-xl text-headline-xl text-primary mb-8 leading-tight" data-reveal>
+              Decades of <span class="text-secondary-container">Trust.</span>
+            </h2>
+
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl" data-reveal>
+              With over 27 years of service and thousands of completed projects, we've built a reputation for reliability, precision, and creative excellence. Our proof lies in the trust our clients place in us.
+            </p>
+
+            <div class="space-y-12 mb-10">
+              <div class="flex gap-6" data-reveal>
+                <div class="text-secondary-container font-headline-xl text-headline-xl" data-count="27">27</div>
+                <div>
+                  <h4 class="font-label-bold text-label-bold uppercase tracking-widest mb-2">Years of Service</h4>
+                  <p class="text-on-surface-variant">Maintaining the highest standards of visual communication since 1997.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-6" data-reveal>
+                <div class="text-on-tertiary-container font-headline-xl text-headline-xl" data-count="5" data-suffix="k+">5k+</div>
+                <div>
+                  <h4 class="font-label-bold text-label-bold uppercase tracking-widest mb-2">Completed Projects</h4>
+                  <p class="text-on-surface-variant">From boutique startups to global enterprise transformations.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4" data-reveal>
+              <a class="inline-block bg-primary text-on-primary px-8 py-4 rounded-lg font-label-bold text-label-bold transition-transform hover:-translate-y-1" href="contact.html">
+                Start Your Project
+              </a>
+              <a class="inline-block px-8 py-4 font-label-bold text-label-bold creative-spark-teal transition-all hover:pr-6 hover:text-on-tertiary-container" href="portfolio.html">
+                View Our Portfolio
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== Technical Deep Dive ============================== -->
+    <section id="technical-edge" class="py-section-padding bg-surface-container-low">
+      <div class="max-w-container-max mx-auto px-gutter">
+        <div class="mb-16 text-center max-w-3xl mx-auto" data-reveal>
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-6">The Technical Edge</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant">We speak the language of manufacturers. Our expertise isn't just aesthetic; it's deeply rooted in the physical reality of production.</p>
+        </div>
+
+        <div class="bento-grid" data-stagger>
+          <!-- Litho & Screen -->
+          <div class="col-span-12 md:col-span-8 bg-surface border border-outline-variant/30 rounded-xl p-10 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group" data-reveal>
+            <div class="w-16 h-16 bg-secondary-container/10 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+              <span class="material-symbols-outlined text-secondary text-3xl">print</span>
+            </div>
+            <h3 class="font-headline-md text-[24px] text-primary mb-4">Lithographic &amp; Screen Masters</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">We understand ink viscosity, trapping, and screen meshes. Our files are built for the press, not just the screen, ensuring color fidelity and structural integrity across every impression.</p>
+          </div>
+
+          <!-- Packaging -->
+          <div class="col-span-12 md:col-span-4 bg-surface border border-outline-variant/30 rounded-xl p-10 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group" data-reveal>
+            <div class="w-16 h-16 bg-tertiary-fixed-dim/20 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+              <span class="material-symbols-outlined text-on-tertiary-container text-3xl">inventory_2</span>
+            </div>
+            <h3 class="font-headline-md text-[24px] text-primary mb-4">Packaging Specialists</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">From dieline engineering to material stress testing, we ensure your brand stands tall on the shelf.</p>
+          </div>
+
+          <!-- Circuit Boards -->
+          <div class="col-span-12 md:col-span-5 bg-surface border border-outline-variant/30 rounded-xl p-10 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group" data-reveal>
+            <div class="w-16 h-16 bg-on-error-container/5 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+              <span class="material-symbols-outlined text-error text-3xl">memory</span>
+            </div>
+            <h3 class="font-headline-md text-[24px] text-primary mb-4">Circuit Board Makers</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Precision at the microscopic level. We design functional interfaces that marry electronic necessity with human-centric design.</p>
+          </div>
+
+          <!-- Etching -->
+          <div class="col-span-12 md:col-span-7 bg-surface border border-outline-variant/30 rounded-xl p-10 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group" data-reveal>
+            <div class="w-16 h-16 bg-primary-container/5 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
+              <span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+            </div>
+            <h3 class="font-headline-md text-[24px] text-primary mb-4">Etching &amp; Fine Detail</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">Navigating the complexities of chemical etching and laser engraving requires a specific set of vector skills. We provide the mathematical precision required for zero-tolerance fabrication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== Four Good Reasons ============================== -->
+    <section id="reasons" class="py-section-padding px-gutter max-w-container-max mx-auto">
+      <div class="flex flex-col lg:flex-row gap-16 items-stretch">
+        <div class="lg:w-1/3 flex flex-col" data-reveal>
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Four Good Reasons</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-8">Why leading enterprises and creative directors choose Graystonite for their most technical communication challenges.</p>
+          <div
+            class="w-full flex-1 min-h-64 rounded-xl bg-cover bg-center"
+            data-alt="An abstract, high-resolution image representing technical expertise, featuring overlapping glass layers with subtle magenta and teal glows. The composition is clean and minimalist, with a sense of depth and transparency that reflects Graystonite's professional and agile nature. High-key lighting with soft, diffused shadows."
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeipbU9OVdIspp_XGbNX1tIo0JOL7CiOs3ZbSt5EkeBifVw8gpqdTP-BONRsd_e21tP8Leck4i7LSQR1AMWuxVBCm9jMktUrVYOT248tZzsad2fGbqUqs2m8vY7N2c5B9DMMjHAqPldOzTojwoKwYIGDPjSBZ1Z3O7EdAFm6SGHOfZWgVe1zC4ibkk2F-2F5Xv7npr8fAcgIMuyVnHPPCw2DRMsBJ2RpIzuXiDC7f0nME11BPJa4qj9A')"
+          ></div>
+        </div>
+
+        <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8" data-stagger>
+          <div class="p-8 rounded-xl bg-surface border border-outline-variant/30 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-reveal>
+            <span class="inline-block px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-[12px] mb-4">01</span>
+            <h4 class="font-headline-md text-[24px] text-primary mb-4">Proven Experience</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">Nearly 30 years in the industry means we've seen it all, solved it all, and delivered it all. There is no learning curve on your budget.</p>
+          </div>
+          <div class="p-8 rounded-xl bg-surface border border-outline-variant/30 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-reveal>
+            <span class="inline-block px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-[12px] mb-4">02</span>
+            <h4 class="font-headline-md text-[24px] text-primary mb-4">One Point of Contact</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">No account managers or middle-men. You talk directly to the specialists doing the work, ensuring zero loss in translation.</p>
+          </div>
+          <div class="p-8 rounded-xl bg-surface border border-outline-variant/30 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-reveal>
+            <span class="inline-block px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-[12px] mb-4">03</span>
+            <h4 class="font-headline-md text-[24px] text-primary mb-4">Real Technical Know-How</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">We understand the fabrication process as well as the manufacturer. This saves time, reduces waste, and guarantees quality.</p>
+          </div>
+          <div class="p-8 rounded-xl bg-surface border border-outline-variant/30 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-reveal>
+            <span class="inline-block px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-[12px] mb-4">04</span>
+            <h4 class="font-headline-md text-[24px] text-primary mb-4">Budgets That Fit</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">Efficiency is built into our workflow. We offer high-end studio quality at a scale that respects your project's financial reality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CTA ============================== -->
+    <section id="cta" class="bg-surface-container-low py-section-padding px-gutter overflow-hidden">
+      <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+        <div class="space-y-8 max-w-xl" data-stagger>
+          <span class="inline-block self-start px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold" data-reveal>LET'S TALK</span>
+          <h2 class="font-headline-xl text-headline-xl text-primary leading-tight" data-reveal>
+            Ready to bring your <span class="text-secondary-container">concept</span> to completion?
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed" data-reveal>
+            Let's discuss how nearly three decades of design expertise can elevate your brand's communication strategy.
+          </p>
+          <div class="flex flex-wrap gap-4" data-reveal>
+            <a href="contact.html" class="group relative inline-block px-8 py-4 bg-primary text-on-primary rounded-xl font-label-bold text-label-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              <span class="relative z-10">Schedule a Consultation</span>
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+            </a>
+            <a href="portfolio.html" class="group relative inline-block px-8 py-4 bg-surface text-primary rounded-xl font-label-bold text-label-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg border border-outline-variant/40">
+              <span class="relative z-10">View Recent Work</span>
+              <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Vertical marquee -->
+        <div id="cta-marquee-wrap" class="relative h-[420px] md:h-[500px] flex items-center justify-center" data-reveal style="--d:0.15s">
+          <div class="relative w-full h-full overflow-hidden">
+            <div id="cta-marquee" class="group flex flex-col h-full">
+              <div class="cta-marquee-track flex shrink-0 flex-col">
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Enterprise Brands</div>
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Creative Directors</div>
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Packaging Teams</div>
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Print Studios</div>
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Marketing Leads</div>
+              </div>
+              <div class="cta-marquee-track flex shrink-0 flex-col" aria-hidden="true">
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Enterprise Brands</div>
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Creative Directors</div>
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Packaging Teams</div>
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Print Studios</div>
+                <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Marketing Leads</div>
+              </div>
+            </div>
+            <div class="pointer-events-none absolute top-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-b from-surface-container-low via-surface-container-low/60 to-transparent z-10"></div>
+            <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-t from-surface-container-low via-surface-container-low/60 to-transparent z-10"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================== Footer ============================== -->
+  <footer class="w-full mt-auto bg-primary dark:bg-tertiary">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter py-section-padding items-start">
+      <div class="flex flex-col space-y-4">
+        <span class="font-headline-md text-headline-md font-bold text-on-primary">Graystonite</span>
+        <p class="text-on-primary-container font-body-md">From Concept to Completion. Nearly three decades of visual communication excellence.</p>
+      </div>
+      <div class="flex flex-col space-y-4">
+        <h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Navigation</h4>
+        <div class="grid grid-cols-1 gap-2">
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="index.html">Home</a>
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="about.html">About</a>
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="services.html">Services</a>
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="portfolio.html">Portfolio</a>
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-4">
+        <h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Direct Contact</h4>
+        <div class="grid grid-cols-1 gap-2">
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="tel:+27605483152">Contact John</a>
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="tel:+27760680129">Contact Barbara</a>
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="mailto:graystonite@outlook.com">graystonite@outlook.com</a>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-4">
+        <h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Legal</h4>
+        <div class="grid grid-cols-1 gap-2">
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="terms-of-service.html">Terms of Service</a>
+          <a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-container-max mx-auto px-gutter py-8 border-t border-white/10 text-center">
+      <p class="text-on-primary-container opacity-60 text-sm font-body-md">© 2024 Graystonite. From Concept to Completion.</p>
+    </div>
+  </footer>
+
+  <!-- Page data + behavior -->
+  <script>
+// Graystonite — service tab content
+// Pure data, no DOM logic. Edit this file to add/reorder/change services
+// without touching assets/js/main.js.
+const SERVICE_ACCENTS = {
+  orange:  { iconBg: "bg-secondary-container/10",   iconText: "text-secondary-container",   spark: "creative-spark-orange" },
+  teal:    { iconBg: "bg-on-tertiary-container/10", iconText: "text-on-tertiary-container", spark: "creative-spark-teal" },
+  magenta: { iconBg: "bg-accent-magenta/10",        iconText: "text-accent-magenta",        spark: "creative-spark-magenta" },
+};
+
+const SERVICES = [
+  {
+    key: "branding", accent: "orange", icon: "token", eyebrow: "BRAND SYSTEMS",
+    label: "Branding & Design",
+    titleLead: "Branding &", titleAccent: "Design.",
+    desc: "Identity systems that command attention and build long-term brand equity.",
+    ctaPrimary: "Start Your Identity", cta: "Explore Identity", href: "services.html",
+    image: "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    key: "print", accent: "teal", icon: "print", eyebrow: "PRESS-READY FILES",
+    label: "Print & Litho",
+    titleLead: "Built for the", titleAccent: "press.",
+    desc: "Production for the tactile world, every run calibrated so the physical piece feels as considered as the concept.",
+    ctaPrimary: "Start a Print Run", cta: "Tactile Media", href: "services.html",
+    image: "https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    key: "packaging", accent: "magenta", icon: "inventory_2", eyebrow: "SHELF-READY DESIGN",
+    label: "Packaging",
+    titleLead: "Express your", titleAccent: "story.",
+    desc: "Labels and containers that tell a story — structure and surface designed together for shelf and unboxing alike.",
+    ctaPrimary: "Start Your Packaging", cta: "View Works", href: "portfolio.html",
+    image: "https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    key: "books", accent: "orange", icon: "auto_stories", eyebrow: "EDITORIAL DESIGN",
+    label: "Editorial",
+    titleLead: "Made to be", titleAccent: "read.",
+    desc: "Editorial design for digital and physical publication, built to read beautifully in any format.",
+    ctaPrimary: "Start Your Publication", cta: "See Editorial Work", href: "services.html",
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    key: "digital", accent: "teal", icon: "description", eyebrow: "DIGITAL DOCUMENTS",
+    label: "Digital Reports",
+    titleLead: "Reports, made", titleAccent: " clear.",
+    desc: "Interactive PDFs and accessible corporate reporting, designed with real hierarchy for any device.",
+    ctaPrimary: "Start Your Report", cta: "View Documents", href: "services.html",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    key: "signage", accent: "magenta", icon: "signpost", eyebrow: "ENVIRONMENTAL GRAPHICS",
+    label: "Signage",
+    titleLead: "Find ", titleAccent: "your way.",
+    desc: "Environmental graphics and wayfinding solutions designed alongside the space they live in.",
+    ctaPrimary: "Start Your Signage", cta: "Explore Signage", href: "services.html",
+    image: "https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  },
+  {
+    key: "apparel", accent: "orange", icon: "checkroom", eyebrow: "BRANDED APPAREL",
+    label: "Apparel",
+    titleLead: "Culture, worn", titleAccent: "daily.",
+    desc: "Apparel design that elevates company culture — from uniforms to merch people actually want to wear.",
+    ctaPrimary: "Start Your Apparel", cta: "See Apparel Work", href: "services.html",
+    image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+  },
+];
+
+// Graystonite — page behavior
+// Organized into small, named init functions (rather than a pile of
+// anonymous IIFEs) so each concern is easy to find and disable.
+document.addEventListener("DOMContentLoaded", () => {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.documentElement.classList.add("js"); // reveal styles only hide content once JS is confirmed running
+
+  initStaggerDelays();
+  initScrollReveal(reduceMotion);
+  initPressMicroInteraction();
+  initStickyNav();
+  initCtaMarquee(reduceMotion);
+  initServicePanel();
+});
+
+/** Assigns staggered animation delays to grouped [data-reveal] items. */
+function initStaggerDelays() {
+  document.querySelectorAll("[data-stagger]").forEach((group) => {
+    group.querySelectorAll(":scope > [data-reveal], :scope [data-reveal]").forEach((el, i) => {
+      if (!el.style.getPropertyValue("--d")) {
+        el.style.setProperty("--d", (i * 0.08).toFixed(2) + "s");
+      }
+    });
+  });
+}
+
+/** Animates a stat number counting up from 0 to its data-count value. */
+function countUp(el, reduceMotion) {
+  const to = parseFloat(el.dataset.count);
+  const suffix = el.dataset.suffix || "";
+  const prefix = el.dataset.prefix || "";
+  if (reduceMotion || isNaN(to)) return;
+
+  const duration = 1400;
+  const start = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = prefix + Math.round(to * eased) + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
   }
-</style>
-<!-- Service Strip / Interactive Panel -->
-<section class="bg-surface py-section-padding">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6" data-reveal>
-<div class="max-w-2xl">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Crafting Visual Legacies</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Comprehensive design solutions tailored for the corporate modern world.</p>
-</div>
-<div class="flex gap-2">
-<div class="w-12 h-1 bg-secondary-container rounded-full"></div>
-<div class="w-4 h-1 bg-on-tertiary-container rounded-full"></div>
-<div class="w-4 h-1 bg-accent-magenta rounded-full"></div>
-</div>
-</div>
+  requestAnimationFrame(tick);
+}
 
-<!-- Interactive text + image panel, driven by the tabs below -->
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16" data-reveal>
-<div id="svc-text-col" class="svc-fade">
-<div id="svc-eyebrow" class="inline-flex items-center px-4 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold mb-6">
-<span id="svc-icon" class="material-symbols-outlined text-[16px] mr-2">token</span>
-<span id="svc-eyebrow-text">SERVICE</span>
-</div>
-<h3 id="svc-title" class="font-headline-xl text-headline-xl text-primary leading-[1.05] tracking-tight mb-6">Branding &amp; <span id="svc-title-accent" class="text-secondary-container">Design.</span></h3>
-<p id="svc-desc" class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-10">Identity systems that command attention and build long-term brand equity.</p>
-<div class="flex flex-wrap items-center gap-6">
-<a id="svc-cta-primary" href="services.html" class="inline-block bg-primary text-on-primary px-8 py-4 rounded-xl font-label-bold text-label-bold transition-all hover:translate-y-[-4px] shadow-lg shadow-primary/10">Start This Project</a>
-<a id="svc-link" href="services.html" class="inline-block creative-spark-orange font-label-bold text-label-bold py-1 transition-all hover:pr-3">Explore Identity</a>
-</div>
-</div>
-<div class="relative">
-<div class="h-[320px] rounded-xl overflow-hidden border border-surface-container-high shadow-lg">
-<img id="svc-image" src="https://images.unsplash.com/photo-1600508774634-4e11d34730e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Branding and design work" class="w-full h-full object-cover transition-opacity duration-500"/>
-</div>
-</div>
-</div>
+/** Reveals [data-reveal] elements and triggers stat count-ups as they scroll into view. */
+function initScrollReveal(reduceMotion) {
+  const revealEls = document.querySelectorAll("[data-reveal], [data-count]");
 
-<!-- Tabs: click a service to update the panel above -->
-<div id="svc-tabs" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4" data-stagger>
-<!-- injected by JS -->
-</div>
-</div>
-</section>
+  if (!("IntersectionObserver" in window)) {
+    document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("in-view", "reveal-done"));
+    return;
+  }
 
-<!-- Hero Section -->
-<section class="py-section-padding px-gutter max-w-container-max mx-auto overflow-hidden">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-span-7" data-stagger>
-<span class="inline-block px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold mb-6" data-reveal>WHY GRAYSTONITE</span>
-<h1 class="font-headline-xl text-headline-xl text-primary mb-8 leading-tight" data-reveal>
-                        Know-how most studios <br/><span class="text-secondary-container">don't have.</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl" data-reveal>
-                        With nearly three decades of hands-on experience, we bridge the gap between creative vision and technical execution. We don't just design; we understand the chemistry of the ink, the tension of the screen, and the architecture of the board.
-                    </p>
-<div class="flex flex-wrap gap-4" data-reveal>
-<a class="inline-block bg-primary text-on-primary px-8 py-4 rounded-lg font-label-bold text-label-bold transition-transform hover:-translate-y-1" href="contact.html">
-                            Start Your Project
-                        </a>
-<a class="inline-block px-8 py-4 font-label-bold text-label-bold creative-spark-teal transition-all hover:pr-6 hover:text-on-tertiary-container" href="portfolio.html">
-                            View Our Portfolio
-                        </a>
-</div>
-</div>
-<div class="lg:col-span-5 relative h-[500px] hidden lg:block" data-reveal style="--d:0.2s">
-<div class="absolute inset-0 bg-surface-container-high rounded-xl overflow-hidden border border-outline-variant/30 group">
-<div class="w-full h-full bg-cover bg-center transition-transform duration-[1.2s] ease-out group-hover:scale-105" data-alt="A macro close-up shot of a high-end printing press in operation, showing fine details of cyan ink droplets on a textured paper surface. The lighting is crisp and professional, highlighting the industrial precision. The background shows a modern, airy studio environment with charcoal gray accents and bright white walls." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCg7lQ7rb6DZDXONJUQ-ZFOTea2gvb3w6_XUl64lVxMJO4MuZ_GGO_1dwElRRdoFUFFBOFO5paiYAixSWqw8p8uR9tkfpqfsaFbRwSQCnSPyjS51TpXOhPwfBjvzqT91jVJoF1sK8ypWPSSDMGFQM39C-5QSk88cpY6qk4rxZyn_pGuD18A2IHRD5kJhshJCkH5mx2bDi-WCEMEadKpEXk0jp_GMxjyhbNnJnhZYmkCBhMpv6XtN2z-WQ')"></div>
-</div>
-<!-- Decorative Element -->
-<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-tertiary-fixed-dim/20 rounded-full blur-3xl -z-10 floaty"></div>
-</div>
-</div>
-</section>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
 
-<!-- Proof Section (Flipped Layout — exact height match) -->
-<section class="bg-surface text-primary py-section-padding overflow-hidden">
-  <div class="max-w-container-max mx-auto px-gutter">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:items-stretch items-start">
-
-      <!-- Image Left -->
-      <div class="lg:col-span-5 hidden lg:block">
-        <div class="h-full w-full rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container-high relative group">
-          <!-- Use an img that fills the container -->
-          <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS6C81NCpa5IL8YGEw5DxmO3eCtz50FpP8JpTMPHPcDbDIBz_Aa-sMGFf1t0wQQAZqTFxxm5i-droPPtWqGmXq3m1DyguOMScpSehrc2iMC69blTDZdRqsGIYa1Tyt9L-7fagGlvZJGpUoxHcgqthvwxYT3aRWKIrfLGl4Yd3qoYZXJzP6VlOo4B-PZb-ox-ML8817gGtxQ_QRIfnpq_U5ByDZUePLJTGeqogp8RZ9V77m-tt-tDPcXg"
-            alt="Studio building photo"
-            class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
-            style="min-height:420px;"
-          />
-          <!-- Decorative elements -->
-          <div class="absolute -top-6 -right-6 w-32 h-32 bg-secondary-container rounded-full opacity-20 blur-3xl pointer-events-none"></div>
-          <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-on-tertiary-container rounded-full opacity-10 blur-3xl pointer-events-none"></div>
-        </div>
-      </div>
-
-      <!-- Text Right (fills same height) -->
-      <div class="lg:col-span-7 flex flex-col justify-center h-full" data-stagger>
-        <span class="inline-block self-start px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold mb-6" data-reveal>
-          PROOF POINTS
-        </span>
-
-        <h2 class="font-headline-xl text-headline-xl text-primary mb-8 leading-tight" data-reveal>
-          Decades of <span class="text-secondary-container">Trust.</span>
-        </h2>
-
-        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl" data-reveal>
-          With over 27 years of service and thousands of completed projects, we’ve built a reputation for reliability, precision, and creative excellence. Our proof lies in the trust our clients place in us.
-        </p>
-
-        <div class="space-y-12 mb-10">
-          <div class="flex gap-6" data-reveal>
-            <div class="text-secondary-container font-headline-xl text-headline-xl" data-count="27">27</div>
-            <div>
-              <h4 class="font-label-bold text-label-bold uppercase tracking-widest mb-2">Years of Service</h4>
-              <p class="text-on-surface-variant">Maintaining the highest standards of visual communication since 1997.</p>
-            </div>
-          </div>
-
-          <div class="flex gap-6" data-reveal>
-            <div class="text-on-tertiary-container font-headline-xl text-headline-xl" data-count="5" data-suffix="k+">5k+</div>
-            <div>
-              <h4 class="font-label-bold text-label-bold uppercase tracking-widest mb-2">Completed Projects</h4>
-              <p class="text-on-surface-variant">From boutique startups to global enterprise transformations.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-wrap gap-4" data-reveal>
-          <a class="inline-block bg-primary text-on-primary px-8 py-4 rounded-lg font-label-bold text-label-bold transition-transform hover:-translate-y-1" href="contact.html">
-            Start Your Project
-          </a>
-          <a class="inline-block px-8 py-4 font-label-bold text-label-bold creative-spark-teal transition-all hover:pr-6 hover:text-on-tertiary-container" href="portfolio.html">
-            View Our Portfolio
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Technical Deep Dive (Bento Grid) -->
-<section class="py-section-padding bg-surface-container-low">
-<div class="max-w-container-max mx-auto px-gutter">
-<div class="mb-16 text-center max-w-3xl mx-auto" data-reveal>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">The Technical Edge</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">We speak the language of manufacturers. Our expertise isn't just aesthetic; it's deeply rooted in the physical reality of production.</p>
-</div>
-<div class="bento-grid" data-stagger>
-<!-- Litho & Screen -->
-<div class="col-span-12 md:col-span-8 bg-surface border border-outline-variant/30 rounded-xl p-10 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group" data-reveal>
-<div class="flex flex-col md:flex-row gap-8 items-center">
-<div class="w-16 h-16 flex-shrink-0 bg-secondary-container/10 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined text-secondary text-3xl">print</span>
-</div>
-<div>
-<h3 class="font-headline-md text-headline-md text-primary mb-4">Lithographic & Screen Masters</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">We understand ink viscosity, trapping, and screen meshes. Our files are built for the press, not just the screen, ensuring color fidelity and structural integrity across every impression.</p>
-</div>
-</div>
-</div>
-<!-- Packaging -->
-<div class="col-span-12 md:col-span-4 bg-surface border border-outline-variant/30 rounded-xl p-10 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group" data-reveal>
-<div class="w-16 h-16 bg-tertiary-fixed-dim/20 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined text-on-tertiary-container text-3xl">inventory_2</span>
-</div>
-<h3 class="font-headline-md text-[24px] text-primary mb-4">Packaging Specialists</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">From dieline engineering to material stress testing, we ensure your brand stands tall on the shelf.</p>
-</div>
-<!-- Circuit Boards -->
-<div class="col-span-12 md:col-span-5 bg-surface border border-outline-variant/30 rounded-xl p-10 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group" data-reveal>
-<div class="w-16 h-16 bg-on-error-container/5 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined text-error text-3xl">memory</span>
-</div>
-<h3 class="font-headline-md text-[24px] text-primary mb-4">Circuit Board Makers</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Precision at the microscopic level. We design functional interfaces that marry electronic necessity with human-centric design.</p>
-</div>
-<!-- Etching -->
-<div class="col-span-12 md:col-span-7 bg-surface border border-outline-variant/30 rounded-xl p-10 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group" data-reveal>
-<div class="flex flex-col md:flex-row gap-8 items-center">
-<div class="w-16 h-16 flex-shrink-0 bg-primary-container/5 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
-</div>
-<div>
-<h3 class="font-headline-md text-headline-md text-primary mb-4">Etching & Fine Detail</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Navigating the complexities of chemical etching and laser engraving requires a specific set of vector skills. We provide the mathematical precision required for zero-tolerance fabrication.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Four Good Reasons -->
-<section class="py-section-padding px-gutter max-w-container-max mx-auto">
-<div class="flex flex-col lg:flex-row gap-16 items-start">
-<div class="lg:w-1/3" data-reveal>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Four Good Reasons</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8">Why leading enterprises and creative directors choose Graystonite for their most technical communication challenges.</p>
-<div class="w-full h-64 rounded-xl bg-cover bg-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700" data-alt="An abstract, high-resolution image representing technical expertise, featuring overlapping glass layers with subtle magenta and teal glows. The composition is clean and minimalist, with a sense of depth and transparency that reflects Graystonite's professional and agile nature. High-key lighting with soft, diffused shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeipbU9OVdIspp_XGbNX1tIo0JOL7CiOs3ZbSt5EkeBifVw8gpqdTP-BONRsd_e21tP8Leck4i7LSQR1AMWuxVBCm9jMktUrVYOT248tZzsad2fGbqUqs2m8vY7N2c5B9DMMjHAqPldOzTojwoKwYIGDPjSBZ1Z3O7EdAFm6SGHOfZWgVe1zC4ibkk2F-2F5Xv7npr8fAcgIMuyVnHPPCw2DRMsBJ2RpIzuXiDC7f0nME11BPJa4qj9A')"></div>
-</div>
-<div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8" data-stagger>
-<!-- Reason 1 -->
-<div class="p-8 rounded-xl bg-surface border border-outline-variant/30 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-reveal>
-<span class="inline-block px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-[12px] mb-4">01</span>
-<h4 class="font-headline-md text-[24px] text-primary mb-4">Proven Experience</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Nearly 30 years in the industry means we've seen it all, solved it all, and delivered it all. There is no learning curve on your budget.</p>
-</div>
-<!-- Reason 2 -->
-<div class="p-8 rounded-xl bg-surface border border-outline-variant/30 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-reveal>
-<span class="inline-block px-3 py-1 rounded-full bg-tertiary-fixed-dim/30 text-on-tertiary-container font-label-bold text-[12px] mb-4">02</span>
-<h4 class="font-headline-md text-[24px] text-primary mb-4">One Point of Contact</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">No account managers or middle-men. You talk directly to the specialists doing the work, ensuring zero loss in translation.</p>
-</div>
-<!-- Reason 3 -->
-<div class="p-8 rounded-xl bg-surface border border-outline-variant/30 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-reveal>
-<span class="inline-block px-3 py-1 rounded-full bg-error-container/40 text-on-error-container font-label-bold text-[12px] mb-4">03</span>
-<h4 class="font-headline-md text-[24px] text-primary mb-4">Real Technical Know-How</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">We understand the fabrication process as well as the manufacturer. This saves time, reduces waste, and guarantees quality.</p>
-</div>
-<!-- Reason 4 -->
-<div class="p-8 rounded-xl bg-surface border border-outline-variant/30 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-reveal>
-<span class="inline-block px-3 py-1 rounded-full bg-primary-container/10 text-primary font-label-bold text-[12px] mb-4">04</span>
-<h4 class="font-headline-md text-[24px] text-primary mb-4">Budgets That Fit</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Efficiency is built into our workflow. We offer high-end studio quality at a scale that respects your project's financial reality.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="bg-surface-container-low py-section-padding px-gutter overflow-hidden">
-<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-
-  <!-- Left content -->
-  <div class="space-y-8 max-w-xl" data-stagger>
-    <span class="inline-block self-start px-3 py-1 rounded-full bg-secondary-container/10 text-secondary font-label-bold text-label-bold" data-reveal>LET'S TALK</span>
-    <h2 class="font-headline-xl text-headline-xl text-primary leading-tight" data-reveal>
-      Ready to bring your <span class="text-secondary-container">concept</span> to completion?
-    </h2>
-    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed" data-reveal>
-      Let's discuss how nearly three decades of design expertise can elevate your brand's communication strategy.
-    </p>
-    <div class="flex flex-wrap gap-4" data-reveal>
-      <a href="contact.html" class="group relative inline-block px-8 py-4 bg-primary text-on-primary rounded-xl font-label-bold text-label-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <span class="relative z-10">Schedule a Consultation</span>
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
-      </a>
-      <a href="portfolio.html" class="group relative inline-block px-8 py-4 bg-surface text-primary rounded-xl font-label-bold text-label-bold overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg border border-outline-variant/40">
-        <span class="relative z-10">View Recent Work</span>
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
-      </a>
-    </div>
-  </div>
-
-  <!-- Right: vertical marquee -->
-  <div id="cta-marquee-wrap" class="relative h-[420px] md:h-[500px] flex items-center justify-center" data-reveal style="--d:0.15s">
-    <div class="relative w-full h-full overflow-hidden">
-      <div id="cta-marquee" class="group flex flex-col h-full">
-        <div class="cta-marquee-track flex shrink-0 flex-col">
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Enterprise Brands</div>
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Creative Directors</div>
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Packaging Teams</div>
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Print Studios</div>
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Marketing Leads</div>
-        </div>
-        <div class="cta-marquee-track flex shrink-0 flex-col" aria-hidden="true">
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Enterprise Brands</div>
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Creative Directors</div>
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Packaging Teams</div>
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Print Studios</div>
-          <div class="marquee-item text-3xl md:text-4xl lg:text-5xl font-headline-md text-primary tracking-tight py-6 text-center">Marketing Leads</div>
-        </div>
-      </div>
-      <!-- Top vignette -->
-      <div class="pointer-events-none absolute top-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-b from-surface-container-low via-surface-container-low/60 to-transparent z-10"></div>
-      <!-- Bottom vignette -->
-      <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-t from-surface-container-low via-surface-container-low/60 to-transparent z-10"></div>
-    </div>
-  </div>
-
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full mt-auto bg-primary dark:bg-tertiary">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter max-w-container-max mx-auto px-gutter py-section-padding items-start">
-<div class="flex flex-col space-y-4">
-<span class="font-headline-md text-headline-md font-bold text-on-primary">Graystonite</span>
-<p class="text-on-primary-container font-body-md">From Concept to Completion. Nearly three decades of visual communication excellence.</p>
-</div>
-<div class="flex flex-col space-y-4">
-<h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Navigation</h4>
-<div class="grid grid-cols-1 gap-2">
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="index.html">Home</a>
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="about.html">About</a>
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="services.html">Services</a>
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="portfolio.html">Portfolio</a>
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="contact.html">Contact</a>
-</div>
-</div>
-<div class="flex flex-col space-y-4">
-<h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Direct Contact</h4>
-<div class="grid grid-cols-1 gap-2">
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="tel:+27605483152">Contact John</a>
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="tel:+27760680129">Contact Barbara</a>
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="mailto:graystonite@outlook.com">graystonite@outlook.com</a>
-</div>
-</div>
-<div class="flex flex-col space-y-4">
-<h4 class="text-on-primary font-bold uppercase tracking-widest text-sm">Legal</h4>
-<div class="grid grid-cols-1 gap-2">
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="terms-of-service.html">Terms of Service</a>
-<a class="text-on-primary-container hover:text-secondary-fixed-dim transition-colors opacity-80 hover:opacity-100" href="terms-and-conditions.html">Terms &amp; Conditions</a>
-</div>
-</div>
-</div>
-<div class="max-w-container-max mx-auto px-gutter py-8 border-t border-white/10 text-center">
-<p class="text-on-primary-container opacity-60 text-sm font-body-md">© 2024 Graystonite. From Concept to Completion.</p>
-</div>
-</footer>
-<script>
-        // Flag that JS is available (reveal styles only hide content when this is set)
-        document.documentElement.classList.add('js');
-
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        // Assign staggered delays to grouped reveal items
-        document.querySelectorAll('[data-stagger]').forEach(group => {
-            group.querySelectorAll(':scope > [data-reveal], :scope [data-reveal]').forEach((el, i) => {
-                if (!el.style.getPropertyValue('--d')) {
-                    el.style.setProperty('--d', (i * 0.08).toFixed(2) + 's');
-                }
-            });
-        });
-
-        // Count-up for stat numbers
-        function countUp(el) {
-            const to = parseFloat(el.dataset.count);
-            const suffix = el.dataset.suffix || '';
-            const prefix = el.dataset.prefix || '';
-            if (reduceMotion || isNaN(to)) { return; }
-            const dur = 1400;
-            const start = performance.now();
-            function tick(now) {
-                const p = Math.min((now - start) / dur, 1);
-                const eased = 1 - Math.pow(1 - p, 3);
-                el.textContent = prefix + Math.round(to * eased) + suffix;
-                if (p < 1) requestAnimationFrame(tick);
-            }
-            requestAnimationFrame(tick);
+        if (el.hasAttribute("data-reveal")) {
+          el.classList.add("in-view");
+          el.addEventListener("animationend", () => el.classList.add("reveal-done"), { once: true });
         }
+        if (el.hasAttribute("data-count")) countUp(el, reduceMotion);
 
-        // Reveal + count-up on scroll
-        if ('IntersectionObserver' in window) {
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    const el = entry.target;
-                    if (el.hasAttribute('data-reveal')) {
-                        el.classList.add('in-view');
-                        el.addEventListener('animationend', () => el.classList.add('reveal-done'), { once: true });
-                    }
-                    if (el.hasAttribute('data-count')) countUp(el);
-                    io.unobserve(el);
-                });
-            }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        observer.unobserve(el);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+  );
 
-            document.querySelectorAll('[data-reveal], [data-count]').forEach(el => io.observe(el));
-        } else {
-            // No observer support: reveal everything immediately
-            document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in-view', 'reveal-done'));
-        }
+  revealEls.forEach((el) => observer.observe(el));
+}
 
-        // Button / link press micro-interaction
-        document.querySelectorAll('button, a').forEach(elem => {
-            elem.addEventListener('mousedown', () => elem.classList.add('scale-95'));
-            elem.addEventListener('mouseup', () => elem.classList.remove('scale-95'));
-            elem.addEventListener('mouseleave', () => elem.classList.remove('scale-95'));
-        });
+/** Adds a subtle press-down effect to every button and link. */
+function initPressMicroInteraction() {
+  document.querySelectorAll("button, a").forEach((el) => {
+    el.addEventListener("mousedown", () => el.classList.add("scale-95"));
+    el.addEventListener("mouseup", () => el.classList.remove("scale-95"));
+    el.addEventListener("mouseleave", () => el.classList.remove("scale-95"));
+  });
+}
 
-        // Sticky nav scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-md', 'bg-opacity-90', 'backdrop-blur-md');
-            } else {
-                header.classList.remove('shadow-md', 'bg-opacity-90', 'backdrop-blur-md');
-            }
-        });
+/** Adds a shadow/blur to the header once the page has scrolled. */
+function initStickyNav() {
+  const header = document.querySelector("header");
+  if (!header) return;
 
-        // ---- CTA vertical marquee: pause on hover + center-fade opacity ----
-        (function () {
-            const wrap = document.getElementById('cta-marquee-wrap');
-            const marquee = document.getElementById('cta-marquee');
-            if (!wrap || !marquee) return;
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("shadow-md", window.scrollY > 50);
+    header.classList.toggle("bg-opacity-90", window.scrollY > 50);
+    header.classList.toggle("backdrop-blur-md", window.scrollY > 50);
+  });
+}
 
-            if (reduceMotion) return;
+/** Fades marquee items by distance from center and (implicitly) pauses via CSS on hover. */
+function initCtaMarquee(reduceMotion) {
+  const wrap = document.getElementById("cta-marquee-wrap");
+  const marquee = document.getElementById("cta-marquee");
+  if (!wrap || !marquee || reduceMotion) return;
 
-            function updateOpacity() {
-                const items = wrap.querySelectorAll('.marquee-item');
-                const containerRect = wrap.getBoundingClientRect();
-                const centerY = containerRect.top + containerRect.height / 2;
+  function updateOpacity() {
+    const containerRect = wrap.getBoundingClientRect();
+    const centerY = containerRect.top + containerRect.height / 2;
+    const maxDistance = containerRect.height / 2;
 
-                items.forEach((item) => {
-                    const itemRect = item.getBoundingClientRect();
-                    const itemCenterY = itemRect.top + itemRect.height / 2;
-                    const distance = Math.abs(centerY - itemCenterY);
-                    const maxDistance = containerRect.height / 2;
-                    const normalizedDistance = Math.min(distance / maxDistance, 1);
-                    const opacity = 1 - normalizedDistance * 0.75;
-                    item.style.opacity = opacity.toString();
-                });
-            }
+    wrap.querySelectorAll(".marquee-item").forEach((item) => {
+      const itemRect = item.getBoundingClientRect();
+      const itemCenterY = itemRect.top + itemRect.height / 2;
+      const distance = Math.abs(centerY - itemCenterY);
+      const normalizedDistance = Math.min(distance / maxDistance, 1);
+      item.style.opacity = (1 - normalizedDistance * 0.75).toString();
+    });
+    requestAnimationFrame(updateOpacity);
+  }
+  requestAnimationFrame(updateOpacity);
+}
 
-            function loop() {
-                updateOpacity();
-                requestAnimationFrame(loop);
-            }
-            requestAnimationFrame(loop);
-        })();
+/** Wires up the clickable service tabs and the text/image panel they control. */
+function initServicePanel() {
+  const tabsEl = document.getElementById("svc-tabs");
+  if (!tabsEl || typeof SERVICES === "undefined") return;
 
-        // ---- Interactive Service Panel ----
-        (function () {
-            const accents = {
-                orange:  { iconBg: 'bg-secondary-container/10',    iconText: 'text-secondary-container',    spark: 'creative-spark-orange' },
-                teal:    { iconBg: 'bg-on-tertiary-container/10',  iconText: 'text-on-tertiary-container',  spark: 'creative-spark-teal' },
-                magenta: { iconBg: 'bg-accent-magenta/10',         iconText: 'text-accent-magenta',         spark: 'creative-spark-magenta' }
-            };
+  const textCol = document.getElementById("svc-text-col");
+  const eyebrowEl = document.getElementById("svc-eyebrow");
+  const eyebrowTextEl = document.getElementById("svc-eyebrow-text");
+  const iconEl = document.getElementById("svc-icon");
+  const titleEl = document.getElementById("svc-title");
+  const titleAccentEl = document.getElementById("svc-title-accent");
+  const descEl = document.getElementById("svc-desc");
+  const ctaPrimaryEl = document.getElementById("svc-cta-primary");
+  const linkEl = document.getElementById("svc-link");
+  const imageEl = document.getElementById("svc-image");
 
-            const services = [
-                {
-                    key: 'branding', accent: 'orange', icon: 'token', eyebrow: 'BRAND SYSTEMS',
-                    label: 'Branding & Design',
-                    titleLead: 'Branding &', titleAccent: 'Design.',
-                    desc: 'Identity systems that command attention and build long-term brand equity.',
-                    ctaPrimary: 'Start Your Identity', cta: 'Explore Identity', href: 'services.html',
-                    image: 'https://images.unsplash.com/photo-1600508774634-4e11d34730e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-                },
-                {
-                    key: 'print', accent: 'teal', icon: 'print', eyebrow: 'PRESS-READY FILES',
-                    label: 'Print & Litho',
-                    titleLead: 'Built for the', titleAccent: 'press.',
-                    desc: 'Production for the tactile world, every run calibrated so the physical piece feels as considered as the concept.',
-                    ctaPrimary: 'Start a Print Run', cta: 'Tactile Media', href: 'services.html',
-                    image: 'https://images.unsplash.com/photo-1567443024551-f3e3cc2be870?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-                },
-                {
-                    key: 'packaging', accent: 'magenta', icon: 'inventory_2', eyebrow: 'SHELF-READY DESIGN',
-                    label: 'Packaging',
-                    titleLead: 'Express your', titleAccent: 'story.',
-                    desc: 'Labels and containers that tell a story — structure and surface designed together for shelf and unboxing alike.',
-                    ctaPrimary: 'Start Your Packaging', cta: 'View Works', href: 'portfolio.html',
-                    image: 'https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-                },
-                {
-                    key: 'books', accent: 'orange', icon: 'auto_stories', eyebrow: 'EDITORIAL DESIGN',
-                    label: 'Editorial',
-                    titleLead: 'Made to be', titleAccent: 'read.',
-                    desc: 'Editorial design for digital and physical publication, built to read beautifully in any format.',
-                    ctaPrimary: 'Start Your Publication', cta: 'See Editorial Work', href: 'services.html',
-                    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-                },
-                {
-                    key: 'digital', accent: 'teal', icon: 'description', eyebrow: 'DIGITAL DOCUMENTS',
-                    label: 'Digital Reports',
-                    titleLead: 'Reports, made', titleAccent: ' clear.',
-                    desc: 'Interactive PDFs and accessible corporate reporting, designed with real hierarchy for any device.',
-                    ctaPrimary: 'Start Your Report', cta: 'View Documents', href: 'services.html',
-                    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-                },
-                {
-                    key: 'signage', accent: 'magenta', icon: 'signpost', eyebrow: 'ENVIRONMENTAL GRAPHICS',
-                    label: 'Signage',
-                    titleLead: 'Find ', titleAccent: 'your way.',
-                    desc: 'Environmental graphics and wayfinding solutions designed alongside the space they live in.',
-                    ctaPrimary: 'Start Your Signage', cta: 'Explore Signage', href: 'services.html',
-                    image: 'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-                },
-                {
-                    key: 'apparel', accent: 'orange', icon: 'checkroom', eyebrow: 'BRANDED APPAREL',
-                    label: 'Apparel',
-                    titleLead: 'Culture, worn', titleAccent: 'daily.',
-                    desc: 'Apparel design that elevates company culture — from uniforms to merch people actually want to wear.',
-                    ctaPrimary: 'Start Your Apparel', cta: 'See Apparel Work', href: 'services.html',
-                    image: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-                }
-            ];
+  const accentTextColor = {
+    orange: "text-secondary-container",
+    teal: "text-on-tertiary-container",
+    magenta: "text-accent-magenta",
+  };
 
-            const tabsEl = document.getElementById('svc-tabs');
-            const textCol = document.getElementById('svc-text-col');
-            const eyebrowEl = document.getElementById('svc-eyebrow');
-            const eyebrowTextEl = document.getElementById('svc-eyebrow-text');
-            const iconEl = document.getElementById('svc-icon');
-            const titleEl = document.getElementById('svc-title');
-            const titleAccentEl = document.getElementById('svc-title-accent');
-            const descEl = document.getElementById('svc-desc');
-            const ctaPrimaryEl = document.getElementById('svc-cta-primary');
-            const linkEl = document.getElementById('svc-link');
-            const imageEl = document.getElementById('svc-image');
+  function renderTabs(activeKey) {
+    tabsEl.innerHTML = "";
+    SERVICES.forEach((service) => {
+      const accent = SERVICE_ACCENTS[service.accent];
+      const isActive = service.key === activeKey;
 
-            const accentTextColor = { orange: 'text-secondary-container', teal: 'text-on-tertiary-container', magenta: 'text-accent-magenta' };
+      const card = document.createElement("button");
+      card.type = "button";
+      card.dataset.active = isActive ? "true" : "false";
+      card.className = "svc-tab text-left group bg-white border border-surface-container-high p-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg";
+      card.innerHTML = `
+        <div class="w-10 h-10 ${accent.iconBg} rounded-lg flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-110">
+          <span class="material-symbols-outlined ${accent.iconText} text-xl">${service.icon}</span>
+        </div>
+        <h4 class="font-label-bold text-label-bold text-primary">${service.label}</h4>
+      `;
+      card.addEventListener("click", () => setActiveService(service.key));
+      tabsEl.appendChild(card);
+    });
+  }
 
-            if (!tabsEl) return;
+  function setActiveService(key) {
+    const service = SERVICES.find((s) => s.key === key);
+    const accent = SERVICE_ACCENTS[service.accent];
 
-            function renderTabs(activeKey) {
-                tabsEl.innerHTML = '';
-                services.forEach(s => {
-                    const a = accents[s.accent];
-                    const isActive = s.key === activeKey;
-                    const card = document.createElement('button');
-                    card.type = 'button';
-                    card.dataset.active = isActive ? 'true' : 'false';
-                    card.className = 'svc-tab text-left group bg-white border border-surface-container-high p-5 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg';
-                    card.innerHTML = `
-                        <div class="w-10 h-10 ${a.iconBg} rounded-lg flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-110">
-                            <span class="material-symbols-outlined ${a.iconText} text-xl">${s.icon}</span>
-                        </div>
-                        <h4 class="font-label-bold text-label-bold text-primary">${s.label}</h4>
-                    `;
-                    card.addEventListener('click', () => setActive(s.key));
-                    tabsEl.appendChild(card);
-                });
-            }
+    textCol.classList.remove("svc-fade");
+    void textCol.offsetWidth; // restart the fade animation
+    textCol.classList.add("svc-fade");
 
-            function setActive(key) {
-                const s = services.find(x => x.key === key);
-                const a = accents[s.accent];
+    eyebrowEl.className = `inline-flex items-center px-4 py-1 rounded-full ${accent.iconBg} ${accentTextColor[service.accent]} font-label-bold text-label-bold mb-6 transition-colors duration-300`;
+    iconEl.textContent = service.icon;
+    iconEl.className = `material-symbols-outlined text-[16px] mr-2 ${accentTextColor[service.accent]}`;
+    eyebrowTextEl.textContent = service.eyebrow;
 
-                textCol.classList.remove('svc-fade');
-                void textCol.offsetWidth;
-                textCol.classList.add('svc-fade');
+    titleEl.childNodes[0].textContent = service.titleLead + " ";
+    titleAccentEl.textContent = service.titleAccent;
+    titleAccentEl.className = accentTextColor[service.accent];
 
-                eyebrowEl.className = `inline-flex items-center px-4 py-1 rounded-full ${a.iconBg} ${accentTextColor[s.accent]} font-label-bold text-label-bold mb-6 transition-colors duration-300`;
-                iconEl.textContent = s.icon;
-                iconEl.className = `material-symbols-outlined text-[16px] mr-2 ${accentTextColor[s.accent]}`;
-                eyebrowTextEl.textContent = s.eyebrow;
+    descEl.textContent = service.desc;
 
-                titleEl.childNodes[0].textContent = s.titleLead + ' ';
-                titleAccentEl.textContent = s.titleAccent;
-                titleAccentEl.className = accentTextColor[s.accent];
+    ctaPrimaryEl.textContent = service.ctaPrimary;
+    ctaPrimaryEl.href = service.href;
 
-                descEl.textContent = s.desc;
+    linkEl.textContent = service.cta;
+    linkEl.href = service.href;
+    linkEl.className = `inline-block ${accent.spark} font-label-bold text-label-bold py-1 transition-all hover:pr-3`;
 
-                ctaPrimaryEl.textContent = s.ctaPrimary;
-                ctaPrimaryEl.href = s.href;
+    imageEl.style.opacity = 0;
+    setTimeout(() => {
+      imageEl.src = service.image;
+      imageEl.style.opacity = 1;
+    }, 180);
 
-                linkEl.textContent = s.cta;
-                linkEl.href = s.href;
-                linkEl.className = `inline-block ${a.spark} font-label-bold text-label-bold py-1 transition-all hover:pr-3`;
+    renderTabs(key);
+  }
 
-                imageEl.style.opacity = 0;
-                setTimeout(() => {
-                    imageEl.src = s.image;
-                    imageEl.style.opacity = 1;
-                }, 180);
-
-                renderTabs(key);
-            }
-
-            setActive('branding');
-        })();
-    </script>
-</body></html>
+  setActiveService("branding");
+}
+  </script>
+</body>
+</html>

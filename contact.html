@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -118,6 +117,47 @@
             height: 2px;
             background-color: theme('colors.secondary-container');
         }
+
+        /* ---- HQ section: print-industry "job ticket" motif ---- */
+        .crop-mark {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            pointer-events: none;
+        }
+        .crop-mark::before,
+        .crop-mark::after {
+            content: '';
+            position: absolute;
+            background: currentColor;
+        }
+        .crop-mark::before { width: 100%; height: 1.5px; top: 50%; transform: translateY(-50%); }
+        .crop-mark::after  { height: 100%; width: 1.5px; left: 50%; transform: translateX(-50%); }
+        .crop-mark.tl { top: 14px; left: 14px; }
+        .crop-mark.tr { top: 14px; right: 14px; }
+        .crop-mark.bl { bottom: 14px; left: 14px; }
+        .crop-mark.br { bottom: 14px; right: 14px; }
+
+        .ticket-perforation {
+            background-image: radial-gradient(circle, theme('colors.surface') 3px, transparent 3.5px);
+            background-size: 18px 18px;
+            background-position: center;
+        }
+
+        .registration-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+        }
+
+        .hq-map-frame {
+            filter: grayscale(1) contrast(1.05);
+            transition: filter 0.6s ease;
+        }
+        .hq-map-wrap:hover .hq-map-frame,
+        .hq-map-wrap:focus-within .hq-map-frame {
+            filter: grayscale(0) contrast(1);
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
@@ -214,20 +254,89 @@
 </div>
 </div>
 </section>
-<!-- Location/Map Placeholder Section -->
+<!-- Headquarters Section: "Job Ticket" print-studio motif -->
 <section class="pb-section-padding px-gutter max-w-container-max mx-auto">
-<div class="w-full h-[500px] rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 shadow-xl relative border border-[#F1F1F1]">
-<div class="w-full h-full bg-surface-container-high flex items-center justify-center relative" data-location="Johannesburg" style="">
-<!-- Symbolic Map Background -->
-<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#2b2b2b 1px, transparent 1px); background-size: 24px 24px;"></div>
-<div class="text-center z-10 p-gutter">
-<div class="inline-flex items-center justify-center w-20 h-20 bg-primary text-on-primary rounded-full mb-6">
-<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="flex items-center gap-3 mb-8">
+<span class="registration-dot bg-secondary-container"></span>
+<span class="registration-dot bg-on-tertiary-container"></span>
+<span class="registration-dot bg-primary"></span>
+<p class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest ml-2">Job Ticket — Studio Location</p>
 </div>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Johannesburg HQ</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto">Meetings by appointment only at our private studio. Experience the creative edge of professional design.</p>
-</div>
-</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+
+  <!-- Map: the "proof" -->
+  <div class="lg:col-span-7 hq-map-wrap group relative rounded-xl overflow-hidden shadow-xl border border-[#F1F1F1]">
+    <iframe
+      class="hq-map-frame w-full h-[420px] lg:h-full min-h-[420px]"
+      src="https://www.google.com/maps?q=Johannesburg,South+Africa&output=embed"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Graystonite Johannesburg HQ map">
+    </iframe>
+    <div class="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm text-on-primary text-label-bold font-label-bold uppercase tracking-widest px-4 py-2 rounded-full pointer-events-none">
+      Hover to focus
+    </div>
+  </div>
+
+  <!-- Ticket: the spec sheet -->
+  <div class="lg:col-span-5">
+    <div class="relative bg-white rounded-xl shadow-sm border border-[#F1F1F1] p-10 h-full">
+      <span class="crop-mark tl text-primary/30"></span>
+      <span class="crop-mark tr text-primary/30"></span>
+      <span class="crop-mark bl text-primary/30"></span>
+      <span class="crop-mark br text-primary/30"></span>
+
+      <div class="flex items-center justify-between mb-8 pb-6 border-b border-dashed border-outline-variant">
+        <div>
+          <p class="font-label-bold text-label-bold text-on-surface-variant opacity-60 uppercase tracking-widest">Location No.</p>
+          <p class="font-headline-md text-headline-md text-primary">01</p>
+        </div>
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-primary text-on-primary rounded-full">
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+        </div>
+      </div>
+
+      <h2 class="font-headline-lg text-headline-lg text-primary mb-3">Johannesburg HQ</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+        Our private studio floor — where design, print, and packaging teams sit under one roof. Meetings run by appointment only.
+      </p>
+
+      <dl class="space-y-5 mb-8">
+        <div class="flex items-start gap-4">
+          <dt class="shrink-0 w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center">
+            <span class="material-symbols-outlined text-on-tertiary-container text-lg">schedule</span>
+          </dt>
+          <dd class="font-body-md text-on-surface-variant">
+            <span class="block font-bold text-primary">By appointment</span>
+            Mon – Fri, 08:00 – 17:00 SAST
+          </dd>
+        </div>
+        <div class="flex items-start gap-4">
+          <dt class="shrink-0 w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary-container text-lg">local_shipping</span>
+          </dt>
+          <dd class="font-body-md text-on-surface-variant">
+            <span class="block font-bold text-primary">Production floor on-site</span>
+            Print, packaging &amp; fulfilment under one roof
+          </dd>
+        </div>
+      </dl>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Johannesburg,South+Africa"
+        target="_blank"
+        rel="noopener"
+        class="ticket-perforation w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary py-4 rounded-xl font-label-bold text-label-bold uppercase tracking-widest hover:bg-primary-container transition-colors"
+      >
+        Get Directions
+        <span class="material-symbols-outlined text-lg">arrow_outward</span>
+      </a>
+    </div>
+  </div>
+
 </div>
 </section>
 </main>
